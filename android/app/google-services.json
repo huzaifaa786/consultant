@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "644037532779",
+    "project_id": "knust-counselling-f2f0b",
+    "storage_bucket": "knust-counselling-f2f0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644037532779:android:e4f1a3a2c596d0ca58652e",
+        "android_client_info": {
+          "package_name": "com.knust.counselling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644037532779-8jahid2anm6t7chsmlkkk90irei5k2qe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.knust.counselling",
+            "certificate_hash": "599d6c0d40cac085f42f69cf68b68a42dcda0070"
+          }
+        },
+        {
+          "client_id": "644037532779-0pmlpv9n9uju8vqhqfnv0djm1c2rj0bl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeXo8EsWo6Sw81IJnIKY8aaktUzj947GU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644037532779-0pmlpv9n9uju8vqhqfnv0djm1c2rj0bl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

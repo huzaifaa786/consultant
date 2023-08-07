@@ -1,0 +1,17 @@
+{
+
+
+    "base_url": "https://counselling.gsaegh.com",
+    "api_base_url": "https://counselling.gsaegh.com/api/",
+    "media_url": "https://counselling.gsaegh.com",
+
+
+
+  "flutterWave_publicKey": "Your flutter wave Public Key Here",
+  "place_search_key": "Your Google Search Key Here",
+  "razorpay_key": "Your Razor Pay Key Here"
+
+
+}
+
+
