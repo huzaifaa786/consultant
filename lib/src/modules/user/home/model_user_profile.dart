@@ -144,7 +144,7 @@ class UserProfileModel {
     _dob = json['dob'];
     _occupation = json['occupation'];
     _onlineStatus = json['online_status'];
-    _adminUser = json['admin_user'];
+    _adminUser =int.tryParse(json['admin_user']);
     _fbId = json['fb_id'];
     _googleId = json['google_id'];
     _createdAt = json['created_at'];

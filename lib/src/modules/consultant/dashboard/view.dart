@@ -63,7 +63,7 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-
+    
     Get.find<DashboardLogic>().scrollController = ScrollController()..addListener(Get.find<DashboardLogic>().scrollListener);
     Get.find<GeneralController>().updateFcmToken(context);
 

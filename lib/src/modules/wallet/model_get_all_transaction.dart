@@ -96,7 +96,7 @@ class TransactionsModel {
   TransactionsModel.fromJson(dynamic json) {
     _id = json['id'];
     _payableType = json['payable_type'];
-    _payableId = json['payable_id'];
+    _payableId = int.tryParse(json['payable_id']);
     _walletId = json['wallet_id'];
     _type = json['type'];
     _amount = json['amount'];

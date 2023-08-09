@@ -3,12 +3,12 @@
 
     "base_url": "https://counselling.gsaegh.com",
     "api_base_url": "https://counselling.gsaegh.com/api/",
-    "media_url": "https://counselling.gsaegh.com",
+    "media_url": "https://counselling.gsaegh.com/",
 
 
 
   "flutterWave_publicKey": "Your flutter wave Public Key Here",
-  "place_search_key": "Your Google Search Key Here",
+  "place_search_key": "AIzaSyC6vU6ooCK6MIN5F0xPmLry1EiuYZ6XNyA",
   "razorpay_key": "Your Razor Pay Key Here"
 
 

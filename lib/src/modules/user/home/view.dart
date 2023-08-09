@@ -88,13 +88,13 @@ class _UserHomePageState extends State<UserHomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SvgPicture.asset('assets/Icons/drawerIcon.svg'),
+                            SvgPicture.asset('assets/Icons/drawerIcon.svg',color: Colors.white,),
                           ],
                         ),
                       ),
                       actions: const [
                         ///---notifications
-                        CustomNotificationIcon()
+                        CustomNotificationIcon(color: Colors.white,)
                       ],
                       flexibleSpace: FlexibleSpaceBar(
                         centerTitle: true,

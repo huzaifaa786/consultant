@@ -215,15 +215,15 @@ class _SlotSelectionState extends State<SlotSelection> {
                                       SizedBox(
                                         height: 5.h,
                                       ),
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 28.w),
-                                        child: Text(
-                                          '${Get.find<GeneralController>().storageBox.read('currency')}${_bookAppointmentLogic.consultantProfileLogic.appointmentTypes[index].fee}',
-                                          style: _bookAppointmentLogic.selectedAppointmentTypeID == _bookAppointmentLogic.consultantProfileLogic.appointmentTypes[index].appointmentTypeId
-                                              ? state.typePriceTextStyle!.copyWith(color: Colors.white)
-                                              : state.typePriceTextStyle,
-                                        ),
-                                      )
+                                      // Padding(
+                                      //   padding: EdgeInsets.only(left: 28.w),
+                                      //   child: Text(
+                                      //     '${Get.find<GeneralController>().storageBox.read('currency')}${_bookAppointmentLogic.consultantProfileLogic.appointmentTypes[index].fee}',
+                                      //     style: _bookAppointmentLogic.selectedAppointmentTypeID == _bookAppointmentLogic.consultantProfileLogic.appointmentTypes[index].appointmentTypeId
+                                      //         ? state.typePriceTextStyle!.copyWith(color: Colors.white)
+                                      //         : state.typePriceTextStyle,
+                                      //   ),
+                                      // )
                                     ],
                                   ),
                                 ),

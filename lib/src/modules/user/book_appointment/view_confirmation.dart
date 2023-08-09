@@ -136,16 +136,16 @@ class _AppointmentConfirmationViewState extends State<AppointmentConfirmationVie
                                       ),
 
                                       ///---fee-box
-                                      Expanded(
-                                        child: Padding(
-                                          padding: EdgeInsets.only(left: 8.w),
-                                          child: BookAppointmentDetailBox(
-                                            title:
-                                                '${Get.find<GeneralController>().storageBox.read('currency')}${_bookAppointmentLogic.consultantProfileLogic.appointmentTypes[_bookAppointmentLogic.selectedAppointmentTypeIndex!].fee} ${LanguageConstant.fees.tr}',
-                                            image: 'assets/Icons/feeIcon.svg',
-                                          ),
-                                        ),
-                                      ),
+                                      // Expanded(
+                                      //   child: Padding(
+                                      //     padding: EdgeInsets.only(left: 8.w),
+                                      //     child: BookAppointmentDetailBox(
+                                      //       title:
+                                      //           '${Get.find<GeneralController>().storageBox.read('currency')}${_bookAppointmentLogic.consultantProfileLogic.appointmentTypes[_bookAppointmentLogic.selectedAppointmentTypeIndex!].fee} ${LanguageConstant.fees.tr}',
+                                      //       image: 'assets/Icons/feeIcon.svg',
+                                      //     ),
+                                      //   ),
+                                      // ),
                                     ],
                                   ),
                                   SizedBox(
@@ -154,7 +154,8 @@ class _AppointmentConfirmationViewState extends State<AppointmentConfirmationVie
 
                                   ///---date-time-boxes
                                   _bookAppointmentLogic.selectMentorAppointmentType!.appointmentType!.isScheduleRequired == 1
-                                      ? Row(
+                                      ? 
+                                      Row(
                                           children: [
                                             ///---date-box
                                             Expanded(

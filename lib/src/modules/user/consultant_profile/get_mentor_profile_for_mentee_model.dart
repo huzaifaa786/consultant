@@ -240,7 +240,7 @@ class Experiences {
 
   Experiences.fromJson(dynamic json) {
     _id = json['id'];
-    _mentorId = json['mentor_id'];
+    _mentorId = int.tryParse(json['mentor_id']);
     _company = json['company'];
     _from = json['from'];
     _to = json['to'];
@@ -305,7 +305,7 @@ class Educations {
 
   Educations.fromJson(dynamic json) {
     _id = json['id'];
-    _mentorId = json['mentor_id'];
+    _mentorId = int.tryParse(json['mentor_id']);
     _institute = json['institute'];
     _degree = json['degree'];
     _subject = json['subject'];
@@ -390,7 +390,7 @@ class Mentor {
     _paymentType = json['payment_type'];
     _status = int.tryParse(json['status']);
     _isProfileCompleted = int.tryParse(json['is_profile_completed']);
-    _isVerified = int.tryParse(json['is_verified']);
+    _isVerified = int.tryParse(json['is_verified'] ?? '0');
     _fee = json['fee'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
@@ -466,8 +466,8 @@ class CategoryListFromGetProfile {
 
   CategoryListFromGetProfile.fromJson(dynamic json) {
     _id = json['id'];
-    _mentorId = json['mentor_id'];
-    _categoryId = json['category_id'];
+    _mentorId = int.parse(json['mentor_id']);
+    _categoryId = int.tryParse(json['category_id']);
     _category = json['category'] != null ? CategoryFromGetProfile.fromJson(json['category']) : null;
   }
   int? _id;
@@ -514,7 +514,7 @@ class CategoryFromGetProfile {
 
   CategoryFromGetProfile.fromJson(dynamic json) {
     _id = json['id'];
-    _parentId = json['parent_id'];
+    _parentId = int.tryParse(json['parent_id']);
     _name = json['name'];
     _slug = json['slug'];
     _imagePath = json['image_path'];

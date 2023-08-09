@@ -65,14 +65,14 @@ class _MyCustomSliverAppBarState extends State<MyCustomSliverAppBar> {
                 padding: EdgeInsetsDirectional.only(end: 5.w),
                 child: SvgPicture.asset(
                   'assets/Icons/searchIcon.svg',
-                  color: customLightThemeColor,
+                  color: Colors.white,
                 ),
               )
             : const SizedBox(),
         SizedBox(
           width: 20.w,
         ),
-        const CustomNotificationIcon()
+        CustomNotificationIcon()
       ],
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,
@@ -98,7 +98,7 @@ class _MyCustomSliverAppBarState extends State<MyCustomSliverAppBar> {
                                 children: [
                                   Text(
                                     '${widget.heading}',
-                                    style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 28.sp, color: customLightThemeColor),
+                                    style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 28.sp, color: Colors.white),
                                   ),
                                   widget.showCreateBlogWidget ?? false
                                       ? InkWell(

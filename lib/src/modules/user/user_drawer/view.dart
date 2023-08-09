@@ -224,7 +224,7 @@ class _UserDrawerPageState extends State<UserDrawerPage> {
                                           children: [
                                             Center(
                                               child: SvgPicture.asset(
-                                                  'assets/Icons/drawerBackArrowIcon.svg'),
+                                                  'assets/Icons/drawerBackArrowIcon.svg', color: Colors.white),
                                             ),
                                           ],
                                         ),
@@ -352,6 +352,7 @@ class _UserDrawerPageState extends State<UserDrawerPage> {
                                             '${drawerShowList[index].icon}',
                                             height: 20.h,
                                             width: 20.w,
+                                            color: Colors.white,
                                           ),
                                         ],
                                       ),
@@ -361,7 +362,7 @@ class _UserDrawerPageState extends State<UserDrawerPage> {
                                       ),
                                     ),
                                     Divider(
-                                      color: const Color(0xff404191),
+                                      color: Colors.white,
                                       thickness: 1.5,
                                       height: 10.h,
                                     )

@@ -16,10 +16,10 @@ class CustomNotificationIcon extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsetsDirectional.only(end: 15),
         child: color == null
-            ? SvgPicture.asset('assets/Icons/notificationIcon.svg')
+            ? SvgPicture.asset('assets/Icons/notificationIcon.svg',color: Colors.white)
             : SvgPicture.asset(
                 'assets/Icons/notificationIcon.svg',
-                color: color,
+                color: Colors.white,
               ),
       ),
     );

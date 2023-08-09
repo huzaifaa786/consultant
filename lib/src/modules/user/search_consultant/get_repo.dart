@@ -10,10 +10,8 @@ consultantSearchRepo(
   if (responseCheck) {
     Get.find<SearchConsultantLogic>().searchConsultantModel =
         SearchConsultantModel.fromJson(response);
-    if (Get.find<SearchConsultantLogic>().searchConsultantModel.status ==
-        true) {
+    if (Get.find<SearchConsultantLogic>().searchConsultantModel.status == true) {
       Get.find<SearchConsultantLogic>().updateSearchLoader(false);
-
     } else {
       Get.find<SearchConsultantLogic>().updateSearchLoader(false);
     }
@@ -21,3 +19,4 @@ consultantSearchRepo(
     Get.find<SearchConsultantLogic>().updateSearchLoader(false);
   }
 }
+

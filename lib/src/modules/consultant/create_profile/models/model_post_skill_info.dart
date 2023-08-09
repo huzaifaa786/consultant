@@ -90,7 +90,7 @@ class CategoryPostModel {
 
   CategoryPostModel.fromJson(dynamic json) {
     _id = json['id'];
-    _parentId = json['parent_id'];
+    _parentId =int.tryParse(json['parent_id']);
     _name = json['name'];
     _imagePath = json['image_path'];
     _description = json['description'];

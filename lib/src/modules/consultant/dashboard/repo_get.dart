@@ -44,6 +44,7 @@ getMentorTodayAppointmentRepo(
 getAppointmentCountMentorRepo(
     BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
+    Get.lazyPut(()=>DashboardLogic());
     Get.find<DashboardLogic>().getAppointmentCountMentorModel =
         GetAppointmentCountMentorModel.fromJson(response);
     Get.find<GeneralController>().updateFormLoaderController(false);
@@ -65,6 +66,7 @@ getRatingMentorRepo(
     if (Get.find<DashboardLogic>().getRatingsModel.status == true) {
     } else {}
   } else if (!responseCheck) {
+    Get.put(DashboardLogic());
     Get.find<DashboardLogic>().updateRefreshController();
     Get.find<DashboardLogic>().updateRatingLoader(false);
   }

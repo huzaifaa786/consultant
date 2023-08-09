@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 getMentorApprovalRepo(
-    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) async{
   if (responseCheck) {
-    Get.find<DashboardLogic>().mentorApprovalCheckModel =
+    Get.lazyPut(()=>DashboardLogic());
+     Get.find<DashboardLogic>().mentorApprovalCheckModel =
         MentorApprovalCheckModel.fromJson(response);
     if (Get.find<DashboardLogic>().mentorApprovalCheckModel.status == true) {
       if (Get.find<DashboardLogic>()

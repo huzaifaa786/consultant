@@ -15,7 +15,7 @@ class UserHomeState {
     headingTextStyle = TextStyle(
       fontFamily: SarabunFontFamily.bold,
       fontSize: 28.sp,
-      color: customLightThemeColor
+      color: Colors.white
     );
     subHeadingTextStyle = TextStyle(
       fontFamily: SarabunFontFamily.extraBold,

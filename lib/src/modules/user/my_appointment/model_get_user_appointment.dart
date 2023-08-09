@@ -287,23 +287,23 @@ class UserAppointmentsData {
 
   UserAppointmentsData.fromJson(dynamic json) {
     _id = json['id'];
-    _menteeId = json['mentee_id'];
-    _mentorId = json['mentor_id'];
+    _menteeId =int.tryParse(json['mentee_id']);
+    _mentorId = int.tryParse(json['mentor_id']);
     _date = json['date'];
     _time = json['time'];
-    _payment = json['payment'];
-    _isPaid = json['is_paid'];
+    _payment = int.tryParse(json['payment']);
+    _isPaid = int.tryParse(json['is_paid']);
     _paymentStatusCode = json['payment_status_code'];
     _paymentResponseMsg = json['payment_response_msg'];
     _paymentOrderRef = json['payment_order_ref'];
-    _paymentId = json['payment_id'];
+    _paymentId = int.tryParse(json['payment_id']);
     _appointmentTypeString = json['appointment_type_string'];
-    _appointmentTypeId = json['appointment_type_id'];
+    _appointmentTypeId = int.tryParse(json['appointment_type_id']);
     _questions = json['questions'];
     _file = json['file'];
     _fileType = json['file_type'];
-    _appointmentStatus = json['appointment_status'];
-    _refund = json['refund'];
+    _appointmentStatus = int.tryParse(json['appointment_status']);
+    _refund = int.tryParse(json['refund']);
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
     _rating = json['rating'];
@@ -477,7 +477,7 @@ class UserAppointmentsDataMentor {
     _dob = json['dob'];
     _occupation = json['occupation'];
     _onlineStatus = json['online_status'];
-    _adminUser = json['admin_user'];
+    _adminUser = int.tryParse(json['admin_user']);
     _fbId = json['fb_id'];
     _googleId = json['google_id'];
     _createdAt = json['created_at'];
@@ -629,7 +629,7 @@ class UserCountry {
     _tld = json['tld'];
     _native = json['native'];
     _region = json['region'];
-    _isActive = json['is_active'];
+    _isActive = int.tryParse(json['is_active']);
     _subregion = json['subregion'];
     _timezones = json['timezones'];
     _translations = json['translations'];
@@ -639,7 +639,7 @@ class UserCountry {
     _emojiU = json['emojiU'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
-    _flag = json['flag'];
+    _flag = int.tryParse(json['flag']);
     _wikiDataId = json['wikiDataId'];
   }
   int? _id;

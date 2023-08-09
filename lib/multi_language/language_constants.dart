@@ -17,8 +17,8 @@ class LanguageConstant {
   static const String minute = 'minute';
   static const String special = 'special';
   static const String step3Of3 = 'step_3_of_3';
-  static const String step2Of3 = 'step_2_of_3';
-  static const String step1Of3 = 'step_1_of_3';
+  static const String step2Of3 = 'step_2_of_2';
+  static const String step1Of3 = 'step_1_of_2';
   static const String enterDetails = 'enter_details';
   static const String aboutYourSelf = 'about_your_self';
   static const String myWallet = 'my_wallet';

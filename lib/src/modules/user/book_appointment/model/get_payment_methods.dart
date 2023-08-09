@@ -84,7 +84,7 @@ class GetPaymentMethodData {
     _description = json['description'];
     _imagePath = json['image_path'];
     _isActive = json['is_active'];
-    _isDefault = json['is_default'];
+    _isDefault =int.tryParse(json['is_default']);
     _code = json['code'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];

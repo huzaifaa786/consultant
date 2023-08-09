@@ -132,14 +132,14 @@ class ConsultantDetailFromGetProfile {
     _about = json['about'];
     _imagePath = json['image_path'];
     _createdAt = json['created_at'];
-    _country = json['country'];
+    _country =int.tryParse(json['country']);
     _fatherName = json['father_name'];
     _cnic = json['cnic'];
     _gender = json['gender'];
     _dob = json['dob'];
     _city = json['city'];
     _address = json['address'];
-    _occupation = json['occupation'];
+    _occupation =int.tryParse(json['occupation'] ?? "0" );
     _religion = json['religion'];
     _onlineStatus = json['online_status'];
     _ratingsAvg = json['ratingsAvg'];
@@ -296,7 +296,7 @@ class CardDetail {
     _accountTitle = json['account_title'];
     _accountNumber = json['account_number'];
     _bank = json['bank'];
-    _mentorId = json['mentor_id'];
+    _mentorId =int.tryParse( json['mentor_id']);
   }
   int? _id;
   String? _accountTitle;
@@ -384,7 +384,7 @@ class UserCountry {
     _tld = json['tld'];
     _native = json['native'];
     _region = json['region'];
-    _isActive = json['is_active'];
+    _isActive =int.tryParse(json['is_active']);
     _subregion = json['subregion'];
     _timezones = json['timezones'];
     _translations = json['translations'];
@@ -394,7 +394,7 @@ class UserCountry {
     _emojiU = json['emojiU'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
-    _flag = json['flag'];
+    _flag =int.tryParse( json['flag']);
     _wikiDataId = json['wikiDataId'];
   }
   int? _id;
@@ -511,13 +511,13 @@ class Mentor {
 
   Mentor.fromJson(dynamic json) {
     _id = json['id'];
-    _userId = json['user_id'];
+    _userId =int.tryParse(json['user_id']);
     _description = json['description'];
     _paymentType = json['payment_type'];
-    _status = json['status'];
-    _isProfileCompleted = json['is_profile_completed'];
-    _isFeatured = json['is_featured'];
-    _isLive = json['is_live'];
+    _status = int.tryParse(json['status']);
+    _isProfileCompleted = int.tryParse(json['is_profile_completed']);
+    _isFeatured = int.tryParse(json['is_featured']);
+    _isLive = int.tryParse(json['is_live']);
     _isVerified = json['is_verified'];
     _fee = json['fee'];
     _createdAt = json['created_at'];
@@ -601,8 +601,8 @@ class Categories {
 
   Categories.fromJson(dynamic json) {
     _id = json['id'];
-    _mentorId = json['mentor_id'];
-    _categoryId = json['category_id'];
+    _mentorId = int.tryParse( json['mentor_id']);
+    _categoryId = int.tryParse(json['category_id']);
     _category = json['category'] != null ? Category.fromJson(json['category']) : null;
   }
   int? _id;
@@ -650,7 +650,7 @@ class Category {
 
   Category.fromJson(dynamic json) {
     _id = json['id'];
-    _parentId = json['parent_id'];
+    _parentId =int.tryParse( json['parent_id']);
     _name = json['name'];
     _slug = json['slug'];
     _imagePath = json['image_path'];

@@ -80,7 +80,7 @@ class Appointmenttype {
   Appointmenttype.fromJson(dynamic json) {
     _id = json['id'];
     _name = json['name'];
-    _isScheduleRequired = json['is_schedule_required'];
+    _isScheduleRequired =int.tryParse(json['is_schedule_required']);
   }
   int? _id;
   String? _name;

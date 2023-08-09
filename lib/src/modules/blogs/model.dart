@@ -152,11 +152,11 @@ class BlogModel {
 
   BlogModel.fromJson(dynamic json) {
     _id = json['id'];
-    _categoryId = json['category_id'];
+    _categoryId = int.tryParse(json['category_id']);
     _title = json['title'];
     _description = json['description'];
     _imagePath = json['image_path'];
-    _featured = json['featured'];
+    _featured = int.tryParse(json['featured']);
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }

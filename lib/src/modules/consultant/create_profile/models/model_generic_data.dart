@@ -332,7 +332,7 @@ class Cities {
   Cities.fromJson(dynamic json) {
     _id = json['id'];
     _name = json['name'];
-    _countryId = json['country_id'];
+    _countryId =int.tryParse(json['country_id']);
   }
   int? _id;
   String? _name;
