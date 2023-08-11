@@ -114,7 +114,7 @@ class MentorSchedulesFullModel {
     _id = json['id'];
     _mentorId = int.tryParse(json['mentor_id']);
     _appointmentTypeId = int.tryParse(json['appointment_type_id']);
-    _fee = int.tryParse(json['fee']);
+    _fee = int.tryParse(json['fee']??'100');
     _day = json['day'];
     _isHoliday = int.tryParse(json['is_holiday']);
     _isActive = int.tryParse(json['is_active']);

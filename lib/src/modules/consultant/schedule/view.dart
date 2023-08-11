@@ -160,7 +160,7 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                                               .bold,
                                                       fontSize: 28.sp,
                                                       color:
-                                                          customLightThemeColor),
+                                                          Colors.white),
                                                 ),
                                                 SizedBox(
                                                   height: 10.h,
@@ -284,9 +284,9 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                         }).toList(),
                                         onChanged: (String? value) {
                                           setState(() {
-                                            _mentorScheduleLogic
-                                                .chargesController
-                                                .clear();
+                                            // _mentorScheduleLogic
+                                            //     .chargesController
+                                            //     .clear();
                                             _mentorScheduleLogic
                                                 .selectedScheduleType = value;
                                             for (var element
@@ -335,65 +335,65 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                               ),
 
                               ///---charges
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      9.w, 0, 15.w, 0),
-                                  child: TextFormField(
-                                    inputFormatters: [
-                                      LengthLimitingTextInputFormatter(6),
-                                      FilteringTextInputFormatter.allow(
-                                          RegExp("[0-9]"))
-                                    ],
-                                    style: state.textFieldTextStyle,
-                                    controller:
-                                        _mentorScheduleLogic.chargesController,
-                                    keyboardType: TextInputType.number,
-                                    decoration: InputDecoration(
-                                      contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              25.w, 15.h, 25.w, 15.h),
-                                      hintText: LanguageConstant
-                                          .enterCharges.tr.capitalizeFirst,
-                                      hintStyle: state.hintTextStyle,
-                                      fillColor: Colors.white,
-                                      filled: true,
-                                      enabledBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8.r),
-                                          borderSide: const BorderSide(
-                                              color: Colors.transparent)),
-                                      border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8.r),
-                                          borderSide: const BorderSide(
-                                              color: Colors.transparent)),
-                                      focusedBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8.r),
-                                          borderSide: const BorderSide(
-                                              color: customLightThemeColor)),
-                                      errorBorder: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8.r),
-                                          borderSide: const BorderSide(
-                                              color: Colors.red)),
-                                    ),
-                                    validator: (String? value) {
-                                      if (value!.isEmpty) {
-                                        return LanguageConstant
-                                            .fieldRequired.tr;
-                                      } else if (int.parse(value.toString()) <
-                                          100) {
-                                        return '${LanguageConstant.minChargesIs.tr}\n${LanguageConstant.rs.tr}. 100'
-                                            .tr;
-                                      } else {
-                                        return null;
-                                      }
-                                    },
-                                  ),
-                                ),
-                              ),
+                              // Expanded(
+                              //   child: Padding(
+                              //     padding: EdgeInsetsDirectional.fromSTEB(
+                              //         9.w, 0, 15.w, 0),
+                              //     child: TextFormField(
+                              //       inputFormatters: [
+                              //         LengthLimitingTextInputFormatter(6),
+                              //         FilteringTextInputFormatter.allow(
+                              //             RegExp("[0-9]"))
+                              //       ],
+                              //       style: state.textFieldTextStyle,
+                              //       controller:
+                              //           _mentorScheduleLogic.chargesController,
+                              //       keyboardType: TextInputType.number,
+                              //       decoration: InputDecoration(
+                              //         contentPadding:
+                              //             EdgeInsetsDirectional.fromSTEB(
+                              //                 25.w, 15.h, 25.w, 15.h),
+                              //         hintText: LanguageConstant
+                              //             .enterCharges.tr.capitalizeFirst,
+                              //         hintStyle: state.hintTextStyle,
+                              //         fillColor: Colors.white,
+                              //         filled: true,
+                              //         enabledBorder: OutlineInputBorder(
+                              //             borderRadius:
+                              //                 BorderRadius.circular(8.r),
+                              //             borderSide: const BorderSide(
+                              //                 color: Colors.transparent)),
+                              //         border: OutlineInputBorder(
+                              //             borderRadius:
+                              //                 BorderRadius.circular(8.r),
+                              //             borderSide: const BorderSide(
+                              //                 color: Colors.transparent)),
+                              //         focusedBorder: OutlineInputBorder(
+                              //             borderRadius:
+                              //                 BorderRadius.circular(8.r),
+                              //             borderSide: const BorderSide(
+                              //                 color: customLightThemeColor)),
+                              //         errorBorder: OutlineInputBorder(
+                              //             borderRadius:
+                              //                 BorderRadius.circular(8.r),
+                              //             borderSide: const BorderSide(
+                              //                 color: Colors.red)),
+                              //       ),
+                              //       validator: (String? value) {
+                              //         if (value!.isEmpty) {
+                              //           return LanguageConstant
+                              //               .fieldRequired.tr;
+                              //         } else if (int.parse(value.toString()) <
+                              //             100) {
+                              //           return '${LanguageConstant.minChargesIs.tr}\n${LanguageConstant.rs.tr}. 100'
+                              //               .tr;
+                              //         } else {
+                              //           return null;
+                              //         }
+                              //       },
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
 
@@ -602,8 +602,7 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                                     'appointment_type_id':
                                                         _mentorScheduleLogic
                                                             .selectedScheduleTypeId,
-                                                    'fee': _mentorScheduleLogic
-                                                        .chargesController.text
+                                                    'fee': '100'
                                                   },
                                                   true,
                                                   saveSchedulePostRepo);
@@ -1489,8 +1488,7 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                               'appointment_type_id':
                                                   _mentorScheduleLogic
                                                       .selectedScheduleTypeId,
-                                              'fee': _mentorScheduleLogic
-                                                  .chargesController.text,
+                                              'fee': '100',
                                               'day': _mentorScheduleLogic
                                                   .selectedAvailableDay,
                                               'interval': _mentorScheduleLogic
@@ -1601,20 +1599,20 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                        Text(
-                                                          LanguageConstant
-                                                              .charges.tr,
-                                                          style: state
-                                                              .previewLabelTextStyle,
-                                                        ),
-                                                        const SizedBox(
-                                                          height: 4,
-                                                        ),
-                                                        Text(
-                                                          '${_mentorScheduleLogic.forDisplayWithoutScheduleList![index].fee}',
-                                                          style: state
-                                                              .previewValueTextStyle,
-                                                        ),
+                                                        // Text(
+                                                        //   LanguageConstant
+                                                        //       .charges.tr,
+                                                        //   style: state
+                                                        //       .previewLabelTextStyle,
+                                                        // ),
+                                                        // const SizedBox(
+                                                        //   height: 4,
+                                                        // ),
+                                                        // Text(
+                                                        //   '${_mentorScheduleLogic.forDisplayWithoutScheduleList![index].fee}',
+                                                        //   style: state
+                                                        //       .previewValueTextStyle,
+                                                        // ),
                                                       ],
                                                     ),
                                                   ),
@@ -1738,20 +1736,20 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                        Text(
-                                                          LanguageConstant
-                                                              .charges.tr,
-                                                          style: state
-                                                              .previewLabelTextStyle,
-                                                        ),
-                                                        const SizedBox(
-                                                          height: 4,
-                                                        ),
-                                                        Text(
-                                                          '${_mentorScheduleLogic.forDisplayScheduleList![index].fee}',
-                                                          style: state
-                                                              .previewValueTextStyle,
-                                                        ),
+                                                        // Text(
+                                                        //   LanguageConstant
+                                                        //       .charges.tr,
+                                                        //   style: state
+                                                        //       .previewLabelTextStyle,
+                                                        // ),
+                                                        // const SizedBox(
+                                                        //   height: 4,
+                                                        // ),
+                                                        // Text(
+                                                        //   '${_mentorScheduleLogic.forDisplayScheduleList![index].fee}',
+                                                        //   style: state
+                                                        //       .previewValueTextStyle,
+                                                        // ),
                                                       ],
                                                     ),
                                                   ),

@@ -54,7 +54,7 @@ class _UserHomePageState extends State<UserHomePage> {
   @override
   void dispose() {
     Get.find<UserHomeLogic>().scrollController!.removeListener(Get.find<UserHomeLogic>().scrollListener);
-    Get.find<UserHomeLogic>().scrollController!.dispose();
+    // Get.find<UserHomeLogic>().scrollController!.dispose();
     super.dispose();
   }
 
