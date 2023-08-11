@@ -71,7 +71,7 @@ class ConsultantAppointmentDetailLogic extends GetxController {
         intl.DateFormat.Hms().format(intl.DateFormat('h:mm a').parse('${selectedAppointmentData.time.toString().substring(0, 5)}'
             '${selectedAppointmentData.time.toString().substring(5, 8).toUpperCase()}'));
     log('This is second.....$time2');
-    String time3 =selectedAppointmentData.endTime ==''? '': intl.DateFormat.Hms()
+    String time3 =selectedAppointmentData.endTime == ''? '00:00:00': intl.DateFormat.Hms()
         .format(intl.DateFormat('h:mm a').parse('${selectedAppointmentData.endTime.toString().substring(0, 5)}'
             '${selectedAppointmentData.endTime.toString().substring(5, 8).toUpperCase()}'));
     log('last time ${selectedAppointmentData.endTime}');
@@ -83,8 +83,9 @@ class ConsultantAppointmentDetailLogic extends GetxController {
 
     DateTime a = DateTime.parse('$_date $time1');
     DateTime b = DateTime.parse('${selectedAppointmentData.date} $time2');
-    DateTime endDateTime = DateTime.parse('${selectedAppointmentData.date} $time3');
+    // DateTime endDateTime = DateTime.parse('${selectedAppointmentData.date} $time3');
 
+    DateTime endDateTime = DateTime.parse('${selectedAppointmentData.date} $time3');
     if ((b.difference(a).inMinutes <= 2) && DateTime.now().isBefore(endDateTime)) {
       showAudioCallButton = true;
       showAppointment = selectedAppointmentData.id!;
@@ -105,7 +106,7 @@ class ConsultantAppointmentDetailLogic extends GetxController {
         intl.DateFormat.Hms().format(intl.DateFormat('h:mm a').parse('${selectedAppointmentData.time.toString().substring(0, 5)}'
             '${selectedAppointmentData.time.toString().substring(5, 8).toUpperCase()}'));
     log('This is second.....$time2');
-    String time3 = intl.DateFormat.Hms()
+    String time3 = selectedAppointmentData.endTime == ''? '00:00:00': intl.DateFormat.Hms()
         .format(intl.DateFormat('h:mm a').parse('${selectedAppointmentData.endTime.toString().substring(0, 5)}'
             '${selectedAppointmentData.endTime.toString().substring(5, 8).toUpperCase()}'));
     log('last time ${selectedAppointmentData.endTime}');

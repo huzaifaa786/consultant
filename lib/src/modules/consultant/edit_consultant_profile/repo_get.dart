@@ -12,38 +12,70 @@ import '../create_profile/models/model_generic_data.dart';
 import '../create_profile/models/model_get_categories.dart';
 import '../create_profile/models/model_get_sub_categorie.dart';
 
-getGenericDataRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+getGenericDataRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
-    Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel = MentorProfileGenericDataModel.fromJson(response);
-    if (Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel.status == true) {
+    Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel =
+        MentorProfileGenericDataModel.fromJson(response);
+    if (Get.find<EditConsultantProfileLogic>()
+            .mentorProfileGenericDataModel
+            .status ==
+        true) {
       ///---occupation
       Get.find<EditConsultantProfileLogic>().emptyOccupationDropDownList();
-      for (var element in Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel.data!.occupations!) {
-        if (element.id == Get.find<GeneralController>().getConsultantProfileModel.data!.userDetail!.occupation!) {
-          Get.find<EditConsultantProfileLogic>().selectedOccupation = element.name;
+      for (var element in Get.find<EditConsultantProfileLogic>()
+          .mentorProfileGenericDataModel
+          .data!
+          .occupations!) {
+        if (element.id ==
+            Get.find<GeneralController>()
+                .getConsultantProfileModel
+                .data!
+                .userDetail!
+                .occupation!) {
+          Get.find<EditConsultantProfileLogic>().selectedOccupation =
+              element.name;
         }
-        Get.find<EditConsultantProfileLogic>().updateOccupationDropDownList(element.name!);
+        Get.find<EditConsultantProfileLogic>()
+            .updateOccupationDropDownList(element.name!);
       }
 
       ///---countries
       Get.find<EditConsultantProfileLogic>().emptyCountryDropDownList();
-      for (var element in Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel.data!.countries!) {
-        if (element.id == Get.find<GeneralController>().getConsultantProfileModel.data!.userDetail!.country!) {
+      for (var element in Get.find<EditConsultantProfileLogic>()
+          .mentorProfileGenericDataModel
+          .data!
+          .countries!) {
+        if (element.id ==
+            Get.find<GeneralController>()
+                .getConsultantProfileModel
+                .data!
+                .userDetail!
+                .country!) {
           Get.find<EditConsultantProfileLogic>().selectedCountry = element.name;
         }
-        Get.find<EditConsultantProfileLogic>().updateCountryDropDownList(element.name!);
+        Get.find<EditConsultantProfileLogic>()
+            .updateCountryDropDownList(element.name!);
       }
 
       ///---degrees
       Get.find<EditConsultantProfileLogic>().emptyDegreeDropDownList();
-      for (var element in Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel.data!.degrees!) {
-        Get.find<EditConsultantProfileLogic>().updateDegreeDropDownList(element.name!);
+      for (var element in Get.find<EditConsultantProfileLogic>()
+          .mentorProfileGenericDataModel
+          .data!
+          .degrees!) {
+        Get.find<EditConsultantProfileLogic>()
+            .updateDegreeDropDownList(element.name!);
       }
 
       ///---banks
       Get.find<EditConsultantProfileLogic>().emptyBankDropDownList();
-      for (var element in Get.find<EditConsultantProfileLogic>().mentorProfileGenericDataModel.data!.banks!) {
-        Get.find<EditConsultantProfileLogic>().updateBankDropDownList(element.name!);
+      for (var element in Get.find<EditConsultantProfileLogic>()
+          .mentorProfileGenericDataModel
+          .data!
+          .banks!) {
+        Get.find<EditConsultantProfileLogic>()
+            .updateBankDropDownList(element.name!);
       }
 
       Get.find<GeneralController>().updateFormLoaderController(false);
@@ -55,18 +87,27 @@ getGenericDataRepo(BuildContext context, bool responseCheck, Map<String, dynamic
   }
 }
 
-getCitiesRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+getCitiesRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
-    Get.find<EditConsultantProfileLogic>().citiesByIdModel = CitiesByIdModel.fromJson(response);
+    Get.find<EditConsultantProfileLogic>().citiesByIdModel =
+        CitiesByIdModel.fromJson(response);
     if (Get.find<EditConsultantProfileLogic>().citiesByIdModel.status == true) {
       ///---cities
       Get.find<EditConsultantProfileLogic>().emptyCityDropDownList();
-      for (var element in Get.find<EditConsultantProfileLogic>().citiesByIdModel.data!.cities!) {
-        Get.find<EditConsultantProfileLogic>().updateCityDropDownList(element.name!);
+      for (var element in Get.find<EditConsultantProfileLogic>()
+          .citiesByIdModel
+          .data!
+          .cities!) {
+        Get.find<EditConsultantProfileLogic>()
+            .updateCityDropDownList(element.name!);
       }
 
       Set<String> seen = <String>{};
-      List<String> uniquelist = Get.find<EditConsultantProfileLogic>().cityDropDownList.where((val) => seen.add(val)).toList();
+      List<String> uniquelist = Get.find<EditConsultantProfileLogic>()
+          .cityDropDownList
+          .where((val) => seen.add(val))
+          .toList();
       Get.find<EditConsultantProfileLogic>().cityDropDownList = uniquelist;
       Get.find<GeneralController>().updateFormLoaderController(false);
     } else {
@@ -77,14 +118,23 @@ getCitiesRepo(BuildContext context, bool responseCheck, Map<String, dynamic> res
   }
 }
 
-getParentCategoryRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+getParentCategoryRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
-    Get.find<EditConsultantProfileLogic>().getParentCategoriesModel = GetCategoriesModel.fromJson(response);
-    if (Get.find<EditConsultantProfileLogic>().getParentCategoriesModel.status == true) {
+    Get.find<EditConsultantProfileLogic>().getParentCategoriesModel =
+        GetCategoriesModel.fromJson(response);
+    if (Get.find<EditConsultantProfileLogic>()
+            .getParentCategoriesModel
+            .status ==
+        true) {
       ///---parent-category
       Get.find<EditConsultantProfileLogic>().emptyCategoryDropDownList();
-      for (var element in Get.find<EditConsultantProfileLogic>().getParentCategoriesModel.data!.mentorCategories!) {
-        Get.find<EditConsultantProfileLogic>().updateCategoryDropDownList(element.name!);
+      for (var element in Get.find<EditConsultantProfileLogic>()
+          .getParentCategoriesModel
+          .data!
+          .mentorCategories!) {
+        Get.find<EditConsultantProfileLogic>()
+            .updateCategoryDropDownList(element.name!);
       }
       getMethod(
           context,
@@ -96,7 +146,14 @@ getParentCategoryRepo(BuildContext context, bool responseCheck, Map<String, dyna
                 .data!
                 .userDetail!
                 .mentor!
-                .categories![Get.find<GeneralController>().getConsultantProfileModel.data!.userDetail!.mentor!.categories!.length - 1]
+                .categories![Get.find<GeneralController>()
+                        .getConsultantProfileModel
+                        .data!
+                        .userDetail!
+                        .mentor!
+                        .categories!
+                        .length -
+                    1]
                 .id
           },
           false,
@@ -109,11 +166,13 @@ getParentCategoryRepo(BuildContext context, bool responseCheck, Map<String, dyna
   }
 }
 
-getChildCategoryRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
-  Get.find<GeneralController>().updateFormLoaderController(false);
+getChildCategoryRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
     print(response);
-    Get.find<EditConsultantProfileLogic>().subCategoriesModel = SubCategoriesModel.fromJson(response);
+    Get.find<EditConsultantProfileLogic>().subCategoriesModel =
+        SubCategoriesModel.fromJson(response);
     log('getChildCategoryRepo ------>> ${Get.find<EditConsultantProfileLogic>().subCategoriesModel.success}');
   }
+  Get.find<GeneralController>().updateFormLoaderController(false);
 }

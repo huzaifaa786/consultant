@@ -175,10 +175,7 @@ class _ConsultantAppointmentDetailPageState extends State<ConsultantAppointmentD
                                           ///---VIDEO
                                           (_consultantAppointmentDetailLogic.selectedAppointmentData.appointmentStatus! == 1) &&
                                                   (_consultantAppointmentDetailLogic.selectedAppointmentData.appointmentTypeString!.toUpperCase() == 'VIDEO')
-                                              ? _consultantAppointmentDetailLogic.showVideoCallButton! &&
-                                                      _consultantAppointmentDetailLogic.showAppointment ==
-                                                          _consultantAppointmentDetailLogic.selectedAppointmentData.id
-                                                  ? PositionedDirectional(
+                                              ? PositionedDirectional(
                                                       end: 0,
                                                       top: 45.h,
                                                       child: InkWell(
@@ -197,7 +194,6 @@ class _ConsultantAppointmentDetailPageState extends State<ConsultantAppointmentD
                                                         ),
                                                       ),
                                                     )
-                                                  : const SizedBox()
                                               : const SizedBox(),
 
                                           ///
@@ -228,9 +224,9 @@ class _ConsultantAppointmentDetailPageState extends State<ConsultantAppointmentD
                                           ///---AUDIO
                                           (_consultantAppointmentDetailLogic.selectedAppointmentData.appointmentStatus! == 1) &&
                                                   (_consultantAppointmentDetailLogic.selectedAppointmentData.appointmentTypeString!.toUpperCase() == 'AUDIO')
-                                              ? _consultantAppointmentDetailLogic.showAudioCallButton! &&
-                                                      _consultantAppointmentDetailLogic.showAppointment ==
-                                                          _consultantAppointmentDetailLogic.selectedAppointmentData.id
+                                              // ? _consultantAppointmentDetailLogic.showAudioCallButton! &&
+                                              //         _consultantAppointmentDetailLogic.showAppointment ==
+                                              //             _consultantAppointmentDetailLogic.selectedAppointmentData.id
                                                   ? PositionedDirectional(
                                                       end: 0,
                                                       top: 45.h,
@@ -250,7 +246,7 @@ class _ConsultantAppointmentDetailPageState extends State<ConsultantAppointmentD
                                                         ),
                                                       ),
                                                     )
-                                                  : const SizedBox()
+                                                  // : const SizedBox()
                                               : const SizedBox(),
                                         ],
                                       ),

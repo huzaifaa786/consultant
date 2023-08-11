@@ -182,7 +182,7 @@ class _ConsultantDrawerPageState extends State<ConsultantDrawerPage> {
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
                                           Center(
-                                            child: SvgPicture.asset('assets/Icons/drawerBackArrowIcon.svg'),
+                                            child: SvgPicture.asset('assets/Icons/drawerBackArrowIcon.svg',color: Colors.white),
                                           ),
                                         ],
                                       ),
@@ -198,7 +198,7 @@ class _ConsultantDrawerPageState extends State<ConsultantDrawerPage> {
                           ListTile(
                             title: Text(LanguageConstant.onlineStatus.tr, style: TextStyle(fontSize: 14.sp, fontFamily: SarabunFontFamily.regular, color: Colors.white)),
                             trailing: Switch(
-                              activeColor: customLightThemeColor,
+                              activeColor: Colors.white,
                               value: Get.find<GeneralController>().getConsultantProfileModel.data?.userDetail?.onlineStatus == 'online' ? true : false,
                               onChanged: (bool? newValue) {
                                 if (!newValue!) {
