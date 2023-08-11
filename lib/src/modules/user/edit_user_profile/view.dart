@@ -144,7 +144,7 @@ class _EditUserProfilePageState extends State<EditUserProfilePage> {
                                                         SarabunFontFamily.bold,
                                                     fontSize: 28.sp,
                                                     color:
-                                                        customLightThemeColor),
+                                                        Colors.white),
                                               ),
                                               SizedBox(
                                                 height: 10.h,

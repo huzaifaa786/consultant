@@ -139,7 +139,7 @@ class _AppointmentDetailPageState extends State<AppointmentDetailPage> {
                                               ),
                                               Text(
                                                 LanguageConstant.apptDetail.tr,
-                                                style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 28.sp, color: customLightThemeColor),
+                                                style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 28.sp, color: Colors.white),
                                               ),
                                               SizedBox(
                                                 height: 10.h,

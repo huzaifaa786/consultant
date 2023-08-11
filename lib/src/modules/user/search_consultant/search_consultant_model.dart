@@ -118,7 +118,7 @@ class Results {
     _updatedAt = json['updated_at'];
     _category = json['category'] != null ? Category.fromJson(json['category']) : null;
     _ratingAvg = 0;
-    _ratingCount = int.parse(json['ratingCount'] ?? "0");
+    _ratingCount = json['ratingCount'] ?? "0";
     _user = json['user'] != null ? User.fromJson(json['user']) : null;
   }
   int? _id;
@@ -241,7 +241,7 @@ class User {
     _email = json['email'];
     _phone = json['phone'];
     _imagePath = json['image_path'];
-    _country = json['country'];
+    _country =int.tryParse( json['country']);
     _city = json['city'];
     _address = json['address'];
     _postalCode = json['postal_code'];
@@ -251,7 +251,7 @@ class User {
     _gender = json['gender'];
     _religion = json['religion'];
     _dob = json['dob'];
-    _occupation = json['occupation'];
+    _occupation =int.tryParse(json['occupation']);
     _onlineStatus = json['online_status'];
     _adminUser = json['admin_user'];
     _fbId = json['fb_id'];

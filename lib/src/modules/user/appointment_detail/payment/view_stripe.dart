@@ -57,7 +57,7 @@ class _StripePaymentForLaterState extends State<StripePaymentForLater> {
             _generalController.focusOut(context);
           },
           child: ModalProgressHUD(
-            inAsyncCall: _generalController.formLoaderController!,
+            inAsyncCall: _generalController.formLoaderController,
             child: Scaffold(
               resizeToAvoidBottomInset: false,
               body: NestedScrollView(
@@ -65,11 +65,11 @@ class _StripePaymentForLaterState extends State<StripePaymentForLater> {
                   headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
                     return <Widget>[
                       ///---header
-                      MyCustomSliverAppBar(
-                        heading: LanguageConstant.payNow.tr,
-                        subHeading: LanguageConstant.payAmountForAppointment.tr,
-                        isShrink: _appointmentDetailLogic.isShrinkStripe,
-                      ),
+                      // MyCustomSliverAppBar(
+                      //   heading: LanguageConstant.payNow.tr,
+                      //   subHeading: LanguageConstant.payAmountForAppointment.tr,
+                      //   isShrink: _appointmentDetailLogic.isShrinkStripe,
+                      // ),
                     ];
                   },
                   body: Stack(

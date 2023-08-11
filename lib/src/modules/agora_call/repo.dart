@@ -139,14 +139,7 @@ getFcmTokenRepo(
                       'routeApp':
                           Get.find<GeneralController>().notificationRouteApp,
                       'channel': '',
-                      'fee': Get.find<BookAppointmentLogic>()
-                                  .selectMentorAppointmentType!
-                                  .appointmentTypeId ==
-                              6
-                          ? Get.find<BookAppointmentLogic>()
-                              .selectMentorAppointmentType!
-                              .fee
-                          : '',
+                      'fee': '100',
                       'mentee_id': Get.find<BookAppointmentLogic>()
                                   .selectMentorAppointmentType!
                                   .appointmentTypeId ==

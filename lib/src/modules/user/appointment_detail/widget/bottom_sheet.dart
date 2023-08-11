@@ -681,46 +681,46 @@ class _ModalInsideModalState extends State<ModalInsideModal> {
                             : const SizedBox(),
 
                         /// pay-now
-                        _appointmentDetailLogic.selectedAppointmentData.isPaid == 1
-                            ? const SizedBox()
-                            : Center(
-                                child: InkWell(
-                                  onTap: () {
-                                    paymentBottomSheetForLater(context);
-                                  },
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(40.w, 0, 40.w, 0),
-                                    child: Container(
-                                      height: 55.h,
-                                      width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        border: Border.all(color: customRedColor),
-                                        borderRadius: BorderRadius.circular(5.r),
-                                      ),
-                                      child: Center(
-                                        child: Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 25.w),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                LanguageConstant.payNow.tr,
-                                                style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 16.sp, color: customRedColor),
-                                              ),
-                                              SvgPicture.asset(
-                                                'assets/Icons/forwardArrowRedIcon.svg',
-                                                height: 29.h,
-                                                width: 29.w,
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
+                        // _appointmentDetailLogic.selectedAppointmentData.isPaid == 1
+                        //     ? const SizedBox()
+                        //     : Center(
+                        //         child: InkWell(
+                        //           onTap: () {
+                        //             paymentBottomSheetForLater(context);
+                        //           },
+                        //           child: Padding(
+                        //             padding: EdgeInsetsDirectional.fromSTEB(40.w, 0, 40.w, 0),
+                        //             child: Container(
+                        //               height: 55.h,
+                        //               width: MediaQuery.of(context).size.width,
+                        //               decoration: BoxDecoration(
+                        //                 color: Colors.white,
+                        //                 border: Border.all(color: customRedColor),
+                        //                 borderRadius: BorderRadius.circular(5.r),
+                        //               ),
+                        //               child: Center(
+                        //                 child: Padding(
+                        //                   padding: EdgeInsets.symmetric(horizontal: 25.w),
+                        //                   child: Row(
+                        //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //                     children: [
+                        //                       // Text(
+                        //                       //   LanguageConstant.payNow.tr,
+                        //                       //   style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 16.sp, color: customRedColor),
+                        //                       // ),
+                        //                       SvgPicture.asset(
+                        //                         'assets/Icons/forwardArrowRedIcon.svg',
+                        //                         height: 29.h,
+                        //                         width: 29.w,
+                        //                       )
+                        //                     ],
+                        //                   ),
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           ),
+                        //         ),
+                        //       ),
 
                         /// rating button
                         !_appointmentDetailLogic.isRated! && _appointmentDetailLogic.selectedAppointmentData.appointmentStatus == 2
@@ -892,32 +892,32 @@ class _ModalInsideModalState extends State<ModalInsideModal> {
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(40.w, 0, 40.w, 0),
                                       child: Container(
-                                        height: 55.h,
-                                        width: MediaQuery.of(context).size.width,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          border: Border.all(color: customRedColor),
-                                          borderRadius: BorderRadius.circular(5.r),
-                                        ),
-                                        child: Center(
-                                          child: Padding(
-                                            padding: EdgeInsets.symmetric(horizontal: 25.w),
-                                            child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Text(
-                                                  LanguageConstant.downloadInvoice.tr,
-                                                  style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 16.sp, color: customRedColor),
-                                                ),
-                                                SvgPicture.asset(
-                                                  'assets/Icons/forwardArrowRedIcon.svg',
-                                                  height: 29.h,
-                                                  width: 29.w,
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                        ),
+                                        // height: 55.h,
+                                        // width: MediaQuery.of(context).size.width,
+                                        // decoration: BoxDecoration(
+                                        //   color: Colors.white,
+                                        //   border: Border.all(color: customRedColor),
+                                        //   borderRadius: BorderRadius.circular(5.r),
+                                        // ),
+                                        // child: Center(
+                                        //   child: Padding(
+                                        //     padding: EdgeInsets.symmetric(horizontal: 25.w),
+                                        //     child: Row(
+                                        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        //       children: [
+                                        //         Text(
+                                        //           LanguageConstant.downloadInvoice.tr,
+                                        //           style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 16.sp, color: customRedColor),
+                                        //         ),
+                                        //         SvgPicture.asset(
+                                        //           'assets/Icons/forwardArrowRedIcon.svg',
+                                        //           height: 29.h,
+                                        //           width: 29.w,
+                                        //         )
+                                        //       ],
+                                        //     ),
+                                        //   ),
+                                        // ),
                                       ),
                                     ),
                                   ),
