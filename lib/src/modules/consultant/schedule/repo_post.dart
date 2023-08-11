@@ -42,7 +42,7 @@ saveSchedulePostRepo(
       Get.find<MentorScheduleLogic>().selectedTimeForEnd = null;
       Get.find<MentorScheduleLogic>().selectedTimeForEndForCalculate = null;
       Get.find<MentorScheduleLogic>().slotsList = [];
-      Get.find<MentorScheduleLogic>().chargesController.clear();
+      // Get.find<MentorScheduleLogic>().chargesController.clear();
       Get.find<MentorScheduleLogic>().durationController.clear();
       Get.find<MentorScheduleLogic>().slotsList = [];
       getMethod(

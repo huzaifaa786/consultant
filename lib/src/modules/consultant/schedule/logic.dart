@@ -11,7 +11,7 @@ class MentorScheduleLogic extends GetxController {
   final MentorScheduleState state = MentorScheduleState();
 
 
-  final TextEditingController chargesController = TextEditingController();
+  // final TextEditingController chargesController = TextEditingController();
   final TextEditingController durationController = TextEditingController();
   ///---------------------------------------get-appointment-types
   GetAppointmentTypesModel getAppointmentTypesModel = GetAppointmentTypesModel();
