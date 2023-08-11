@@ -130,7 +130,7 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
                   ? const MentorApprovalWaitingView()
                   : ModalProgressHUD(
                       progressIndicator: const CircularProgressIndicator(color: customThemeColor),
-                      inAsyncCall: _generalController.formLoaderController!,
+                      inAsyncCall: _generalController.formLoaderController,
                       child: GestureDetector(
                         onTap: () {
                           _generalController.focusOut(context);
@@ -157,7 +157,7 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          SvgPicture.asset('assets/Icons/drawerIcon.svg'),
+                                          SvgPicture.asset('assets/Icons/drawerIcon.svg', color: Colors.white,),
                                         ],
                                       ),
                                     ),
@@ -186,13 +186,13 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
                                                     child: Column(
                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                       mainAxisAlignment: MainAxisAlignment.start,
-                                                      children: [
+                                                      children:[
                                                         SizedBox(
                                                           height: 25.h,
                                                         ),
                                                         Text(
                                                           LanguageConstant.dashboard.tr,
-                                                          style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 28.sp, color: customLightThemeColor),
+                                                          style: TextStyle(fontFamily: SarabunFontFamily.bold, fontSize: 28.sp,  color: Colors.white,),
                                                         ),
                                                         SizedBox(
                                                           height: 10.h,

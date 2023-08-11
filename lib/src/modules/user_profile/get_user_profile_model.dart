@@ -132,7 +132,7 @@ class ConsultantDetailFromGetProfile {
     _about = json['about'];
     _imagePath = json['image_path'];
     _createdAt = json['created_at'];
-    _country =int.tryParse(json['country']);
+    _country =int.tryParse(json['country'] ??'');
     _fatherName = json['father_name'];
     _cnic = json['cnic'];
     _gender = json['gender'];
@@ -702,8 +702,8 @@ class ScheduleTypes {
   }
 
   ScheduleTypes.fromJson(dynamic json) {
-    _appointmentTypeId = json['appointment_type_id'];
-    _fee = json['fee'];
+    _appointmentTypeId =int.tryParse( json['appointment_type_id']);
+    _fee =int.tryParse( json['fee']);
     _appointmentType = json['appointment_type'] != null ? AppointmentType.fromJson(json['appointment_type']) : null;
   }
   int? _appointmentTypeId;
@@ -739,7 +739,7 @@ class AppointmentType {
   AppointmentType.fromJson(dynamic json) {
     _id = json['id'];
     _name = json['name'];
-    _isScheduleRequired = json['is_schedule_required'];
+    _isScheduleRequired =int.tryParse( json['is_schedule_required']);
   }
   int? _id;
   String? _name;

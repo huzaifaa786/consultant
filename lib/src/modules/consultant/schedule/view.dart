@@ -42,7 +42,7 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
     super.initState();
     Get.find<MentorScheduleLogic>().scrollController = ScrollController()
       ..addListener(Get.find<MentorScheduleLogic>().scrollListener);
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Get.find<GeneralController>().updateFormLoaderController(true);
     });
     getMethod(context, getAppointmentTypeUrl, {'token': '123'}, false,
@@ -78,7 +78,7 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
           progressIndicator: const CircularProgressIndicator(
             color: customThemeColor,
           ),
-          inAsyncCall: _generalController.formLoaderController!,
+          inAsyncCall: _generalController.formLoaderController,
           child: GestureDetector(
             onTap: () {
               FocusScopeNode currentFocus = FocusScope.of(context);

@@ -269,29 +269,29 @@ class ConsultantAppointmentsData {
 
   ConsultantAppointmentsData.fromJson(dynamic json) {
     _id = json['id'];
-    _menteeId = json['mentee_id'];
-    _mentorId = json['mentor_id'];
+    _menteeId = int.tryParse(json['mentee_id']);
+    _mentorId = int.tryParse(json['mentor_id']);
     _date = json['date'];
     _time = json['time'];
-    _payment = json['payment'];
-    _isPaid = json['is_paid'];
-    _is_archieve = json['is_archieve'];
+    _payment = int.tryParse(json['payment']);
+    _isPaid = int.tryParse(json['is_paid']);
+    _is_archieve = int.tryParse(json['is_archieve']);
     _paymentStatusCode = json['payment_status_code'];
     _paymentResponseMsg = json['payment_response_msg'];
     _paymentOrderRef = json['payment_order_ref'];
-    _paymentId = json['payment_id'];
+    _paymentId = int.tryParse(json['payment_id']);
     _appointmentTypeString = json['appointment_type_string'];
-    _appointmentTypeId = json['appointment_type_id'];
+    _appointmentTypeId = int.tryParse(json['appointment_type_id']);
     _questions = json['questions'];
     _file = json['file'];
     _fileType = json['file_type'];
-    _appointmentStatus = json['appointment_status'];
-    _refund = json['refund'];
+    _appointmentStatus =int.tryParse( json['appointment_status']);
+    _refund =int.tryParse( json['refund']);
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
     _rating = json['rating'];
     _category = json['category'];
-    _endTime = json['end_time'];
+    _endTime = json['end_time'] ;
     _mentee = json['mentee'] != null ? Mentee.fromJson(json['mentee']) : null;
     _notesConsultant = json['notes_consultant'];
     _fileConsultant = json['file_consultant'];
@@ -349,8 +349,8 @@ class ConsultantAppointmentsData {
   String? get updatedAt => _updatedAt;
   int? get rating => _rating;
   String? get category => _category;
-  String? get endTime => _endTime;
-  Mentee? get mentee => _mentee;
+  String? get endTime => _endTime ;
+  Mentee? get mentee => _mentee ;
   String? get notesConsultant => _notesConsultant;
   String? get fileConsultant => _fileConsultant;
   String? get filetypeConsultant => _filetypeConsultant;
@@ -465,7 +465,7 @@ class Mentee {
     _dob = json['dob'];
     _occupation = json['occupation'];
     _onlineStatus = json['online_status'];
-    _adminUser = json['admin_user'];
+    _adminUser = int.tryParse(json['admin_user']);
     _fbId = json['fb_id'];
     _googleId = json['google_id'];
     _createdAt = json['created_at'];
@@ -625,7 +625,7 @@ class UserCountry {
     _tld = json['tld'];
     _native = json['native'];
     _region = json['region'];
-    _isActive = json['is_active'];
+    _isActive =int.tryParse( json['is_active']);
     _subregion = json['subregion'];
     _timezones = json['timezones'];
     _translations = json['translations'];
@@ -635,7 +635,7 @@ class UserCountry {
     _emojiU = json['emojiU'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
-    _flag = json['flag'];
+    _flag = int.tryParse(json['flag']);
     _wikiDataId = json['wikiDataId'];
   }
   int? _id;
@@ -740,12 +740,12 @@ class MenteeInfo {
 
   MenteeInfo.fromJson(dynamic json) {
     _id = json['id'];
-    _userId = json['user_id'];
+    _userId =int.tryParse( json['user_id']);
     _description = json['description'];
     _walletId = json['wallet_id'];
     _walletAmount = json['wallet_amount'];
     _isActive = json['is_active'];
-    _identityHidden = json['identity_hidden'];
+    _identityHidden = int.tryParse(json['identity_hidden']);
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }

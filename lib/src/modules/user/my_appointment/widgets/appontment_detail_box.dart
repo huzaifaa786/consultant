@@ -140,32 +140,32 @@ class AppointmentDetailBox extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ///---type
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.centerRight,
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.only(end: 0.w),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              SvgPicture.asset(
-                                'assets/Icons/feeIcon.svg',
-                                height: 16.h,
-                                width: 18.w,
-                              ),
-                              SizedBox(
-                                width: 11.w,
-                              ),
-                              Text(
-                                fee!,
-                                style: _myAppointmentLogic.state.feeTextStyle,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                    // Expanded(
+                    //   child: Align(
+                    //     alignment: Alignment.centerRight,
+                    //     child: Padding(
+                    //       padding: EdgeInsetsDirectional.only(end: 0.w),
+                    //       child: Row(
+                    //         crossAxisAlignment: CrossAxisAlignment.center,
+                    //         mainAxisAlignment: MainAxisAlignment.end,
+                    //         children: [
+                    //           SvgPicture.asset(
+                    //             'assets/Icons/feeIcon.svg',
+                    //             height: 16.h,
+                    //             width: 18.w,
+                    //           ),
+                    //           SizedBox(
+                    //             width: 11.w,
+                    //           ),
+                    //           Text(
+                    //             fee!,
+                    //             style: _myAppointmentLogic.state.feeTextStyle,
+                    //           )
+                    //         ],
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
 
                     ///---fee
                     Expanded(
@@ -205,26 +205,26 @@ class AppointmentDetailBox extends StatelessWidget {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              isPaid == 0
-                                  ? const Icon(
-                                      Icons.clear,
-                                      size: 15,
-                                      color: Colors.red,
-                                    )
-                                  : const Icon(
-                                      Icons.check,
-                                      size: 15,
-                                      color: customGreenColor,
-                                    ),
-                              SizedBox(
-                                width: 11.w,
-                              ),
-                              Text(
-                                isPaid == 0 ? 'Un-Paid' : 'Paid',
-                                style: _myAppointmentLogic.state.feeTextStyle,
-                              )
-                            ],
+                            // children: [
+                            //   isPaid == 0
+                            //       ? const Icon(
+                            //           Icons.clear,
+                            //           size: 15,
+                            //           color: Colors.red,
+                            //         )
+                            //       : const Icon(
+                            //           Icons.check,
+                            //           size: 15,
+                            //           color: customGreenColor,
+                            //         ),
+                            //   SizedBox(
+                            //     width: 11.w,
+                            //   ),
+                            //   Text(
+                            //     isPaid == 0 ? 'Un-Paid' : 'Paid',
+                            //     style: _myAppointmentLogic.state.feeTextStyle,
+                            //   )
+                            // ],
                           ),
                         ),
                       ),

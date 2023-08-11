@@ -716,6 +716,7 @@ class _GeneralInfoViewState extends State<GeneralInfoView> {
                                       alignedDropdown: true,
                                       child: DropdownButtonHideUnderline(
                                         child: DropdownButtonFormField<String>(
+                                          
                                           onTap: () {
                                             FocusScopeNode currentFocus = FocusScope.of(context);
                                             if (!currentFocus.hasPrimaryFocus) {

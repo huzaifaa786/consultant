@@ -90,9 +90,9 @@ class Messages {
   Messages.fromJson(dynamic json) {
     _id = int.parse(json['id'].toString());
     _message = json['message'];
-    _senderId = json['sender_id'];
+    _senderId =int.parse(json['sender_id']);
     _senderName = json['sender_name'];
-    _receiverId = json['receiver_id'];
+    _receiverId = int.tryParse(json['receiver_id']);
     _receiverName = json['receiver_name'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];

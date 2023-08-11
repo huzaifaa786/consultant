@@ -112,12 +112,12 @@ class MentorSchedulesFullModel {
 
   MentorSchedulesFullModel.fromJson(dynamic json) {
     _id = json['id'];
-    _mentorId = json['mentor_id'];
-    _appointmentTypeId = json['appointment_type_id'];
-    _fee = json['fee'];
+    _mentorId = int.tryParse(json['mentor_id']);
+    _appointmentTypeId = int.tryParse(json['appointment_type_id']);
+    _fee = int.tryParse(json['fee']);
     _day = json['day'];
-    _isHoliday = json['is_holiday'];
-    _isActive = json['is_active'];
+    _isHoliday = int.tryParse(json['is_holiday']);
+    _isActive = int.tryParse(json['is_active']);
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
     if (json['schedule_slots'] != null) {
@@ -188,12 +188,12 @@ class ScheduleSlots {
 
   ScheduleSlots.fromJson(dynamic json) {
     _id = json['id'];
-    _scheduleId = json['schedule_id'];
+    _scheduleId = int.tryParse(json['schedule_id']);
     _startTime = json['start_time'];
     _endTime = json['end_time'];
     _slotDuration = json['slot_duration'];
-    _isActive = json['is_active'];
-    _shiftId = json['shift_id'];
+    _isActive = int.tryParse(json['is_active']);
+    _shiftId = int.tryParse(json['shift_id']);
   }
   int? _id;
   int? _scheduleId;
@@ -249,12 +249,12 @@ class MentorWithoutScheduleFullModel {
 
   MentorWithoutScheduleFullModel.fromJson(dynamic json) {
     _id = json['id'];
-    _mentorId = json['mentor_id'];
-    _appointmentTypeId = json['appointment_type_id'];
-    _fee = json['fee'];
+    _mentorId =int.tryParse( json['mentor_id']);
+    _appointmentTypeId =int.tryParse( json['appointment_type_id']);
+    _fee =int.tryParse( json['fee']);
     _day = json['day'];
-    _isHoliday = json['is_holiday'];
-    _isActive = json['is_active'];
+    _isHoliday = int.tryParse(json['is_holiday']);
+    _isActive =int.tryParse( json['is_active']);
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
   }

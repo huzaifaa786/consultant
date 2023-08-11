@@ -15,7 +15,7 @@ class ConsultantDrawerLogic extends GetxController {
     DrawerTile(title: LanguageConstant.appointmentLogs.tr, icon: 'assets/Icons/drawerAppointmentIcon.svg'),
     DrawerTile(title: LanguageConstant.editProfile.tr, icon: 'assets/Icons/editProfile.svg'),
     DrawerTile(title: LanguageConstant.mySchedule.tr, icon: 'assets/Icons/feeIcon.svg'),
-    DrawerTile(title: LanguageConstant.myWallet.tr, icon: 'assets/Icons/feeIcon.svg'),
+    // DrawerTile(title: LanguageConstant.myWallet.tr, icon: 'assets/Icons/feeIcon.svg'),
     DrawerTile(title: LanguageConstant.contactUs.tr, icon: 'assets/Icons/drawerContactUsIcon.svg'),
     DrawerTile(title: "My Blogs".tr, icon: 'assets/Icons/drawerBlogIcon.svg'),
     DrawerTile(title: LanguageConstant.blogs.tr, icon: 'assets/Icons/drawerBlogIcon.svg'),
@@ -51,33 +51,28 @@ class ConsultantDrawerLogic extends GetxController {
       case 4:
         {
           Get.back();
-          return Get.toNamed(PageRoutes.walletScreen);
+          return Get.toNamed(PageRoutes.contactUs);
         }
       case 5:
         {
           Get.back();
-          return Get.toNamed(PageRoutes.contactUs);
+          return Get.toNamed(PageRoutes.allBlogs);
         }
       case 6:
         {
           Get.back();
-          return Get.toNamed(PageRoutes.allBlogs);
+          return Get.toNamed(PageRoutes.blogs);
         }
       case 7:
         {
           Get.back();
-          return Get.toNamed(PageRoutes.blogs);
+          return Get.toNamed(PageRoutes.aboutUs);
         }
       case 8:
         {
-          Get.back();
-          return Get.toNamed(PageRoutes.aboutUs);
-        }
-      case 9:
-        {
           return Get.find<GeneralController>().customDropDownDialogForLocale(context);
         }
-      case 10:
+      case 9:
         {
           Get.find<GeneralController>().storageBox.remove('userID');
           Get.find<GeneralController>().storageBox.remove('authToken');

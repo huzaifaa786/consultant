@@ -77,7 +77,7 @@ class MentorScheduleDays {
 
   MentorScheduleDays.fromJson(dynamic json) {
     _day = json['day'];
-    _isHoliday = json['is_holiday'];
+    _isHoliday =int.tryParse( json['is_holiday']);
   }
   String? _day;
   int? _isHoliday;

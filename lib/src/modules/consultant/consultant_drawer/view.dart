@@ -54,7 +54,7 @@ class _ConsultantDrawerPageState extends State<ConsultantDrawerPage> {
                       top: 0,
                       end: 0,
                       child: Image.asset(
-                        'assets/images/drawerBackground.png',
+                        'assets/images/drawerBackground.png', color: Colors.white,
                         width: MediaQuery.of(context).size.width * .8,
                       )),
 
@@ -245,6 +245,7 @@ class _ConsultantDrawerPageState extends State<ConsultantDrawerPage> {
                                                 '${drawerShowList[index].icon}',
                                                 height: 20.h,
                                                 width: 20.w,
+                                                 color: Colors.white,
                                               ),
                                             ],
                                           ),
@@ -254,7 +255,7 @@ class _ConsultantDrawerPageState extends State<ConsultantDrawerPage> {
                                           ),
                                         ),
                                         Divider(
-                                          color: const Color(0xff404191),
+                                         color: Colors.white,
                                           thickness: 1.5,
                                           height: 10.h,
                                         )

@@ -81,7 +81,7 @@ class Tokens {
 
   Tokens.fromJson(dynamic json) {
     _id = json['id'];
-    _userId = json['user_id'];
+    _userId = int.tryParse(json['user_id']);
     _deviceKey = json['device_key'];
     _deviceId = json['device_id'];
   }

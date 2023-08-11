@@ -63,7 +63,7 @@ class _ChatPageState extends State<ChatPage> {
     pusher!.onConnectionStateChange((state) {});
     pusher!.onConnectionError((error) {});
 
-    channel = pusher!.subscribe("chat");
+    channel = pusher!.subscribe("chat1");
 
     channel!.bind(r'App\Events\MessageSent', (event) {
       setState(() {
@@ -340,10 +340,10 @@ class _ChatPageState extends State<ChatPage> {
                                       ),
                                       controller: _chatLogic.messageController,
                                       onTap: () {
-                                        Future.delayed(const Duration(seconds: 1)).whenComplete(() => Get.find<ChatLogic>().chatScrollController!.animateTo(
-                                            Get.find<ChatLogic>().chatScrollController!.position.maxScrollExtent,
-                                            curve: Curves.easeOut,
-                                            duration: const Duration(milliseconds: 500)));
+                                        // Future.delayed(const Duration(seconds: 1)).whenComplete(() => Get.find<ChatLogic>().chatScrollController!.animateTo(
+                                        //     Get.find<ChatLogic>().chatScrollController!.position.maxScrollExtent,
+                                        //     curve: Curves.easeOut,
+                                        //     duration: const Duration(milliseconds: 500)));
                                       },
                                       textInputAction: TextInputAction.send,
                                       keyboardType: TextInputType.multiline,

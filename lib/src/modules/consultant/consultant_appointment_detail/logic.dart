@@ -71,7 +71,7 @@ class ConsultantAppointmentDetailLogic extends GetxController {
         intl.DateFormat.Hms().format(intl.DateFormat('h:mm a').parse('${selectedAppointmentData.time.toString().substring(0, 5)}'
             '${selectedAppointmentData.time.toString().substring(5, 8).toUpperCase()}'));
     log('This is second.....$time2');
-    String time3 = intl.DateFormat.Hms()
+    String time3 =selectedAppointmentData.endTime ==''? '': intl.DateFormat.Hms()
         .format(intl.DateFormat('h:mm a').parse('${selectedAppointmentData.endTime.toString().substring(0, 5)}'
             '${selectedAppointmentData.endTime.toString().substring(5, 8).toUpperCase()}'));
     log('last time ${selectedAppointmentData.endTime}');
