@@ -74,11 +74,11 @@ class _ChatPageState extends State<ChatPage> {
 
       Messages tempChatData = Messages.fromJson(tempMap['message']);
       Get.find<ChatLogic>().updateMessageList(tempChatData);
-      // Future.delayed(const Duration(seconds: 1)).whenComplete(() =>
-      //     Get.find<ChatLogic>().scrollController!.animateTo(
-      //         Get.find<ChatLogic>().scrollController!.position.maxScrollExtent,
-      //         curve: Curves.easeOut,
-      //         duration: const Duration(milliseconds: 500)));
+      Future.delayed(const Duration(seconds: 1)).whenComplete(() =>
+          Get.find<ChatLogic>().scrollController!.animateTo(
+              Get.find<ChatLogic>().scrollController!.position.maxScrollExtent,
+              curve: Curves.easeOut,
+              duration: const Duration(milliseconds: 500)));
       Future.delayed(const Duration(seconds: 1)).whenComplete(() => Get.find<ChatLogic>()
           .chatScrollController!
           .animateTo(Get.find<ChatLogic>().chatScrollController!.position.maxScrollExtent, curve: Curves.easeOut, duration: const Duration(milliseconds: 500)));

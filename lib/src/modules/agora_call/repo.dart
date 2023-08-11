@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:consultant_product/route_generator.dart';
 import 'package:consultant_product/src/api_services/get_service.dart';
 import 'package:consultant_product/src/api_services/post_service.dart';
@@ -11,6 +13,9 @@ import 'package:get/get.dart';
 
 getAgoraTokenRepo(
     BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+      log('gggggggggggggggggggggggggggggggggggggggggggggggggg');
+      log(Get.find<GeneralController>().channelForCall.toString());
+      log('gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg');
   if (responseCheck) {
     Get.find<GeneralController>().getAgoraTokenModel =
         GetAgoraTokenModel.fromJson(response);
@@ -110,6 +115,12 @@ getFcmTokenRepo(
     if (Get.find<GeneralController>().getFcmTokenModel.status == true) {
       for (var element
           in Get.find<GeneralController>().getFcmTokenModel.data!.tokens!) {
+            log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+            log(element.userId.toString());
+            log(element.deviceId.toString());
+
+            log(element.deviceKey.toString());
+
         // log('testtting ${Get.find<BookAppointmentLogic>().selectMentorAppointmentType!.fee}     ${Get.find<BookAppointmentLogic>().selectMentorAppointmentType!.appointmentTypeId}');
         postMethod(
             context,
