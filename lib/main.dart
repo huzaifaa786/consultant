@@ -35,6 +35,9 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey(debugLabel: "Main Navig
 RtcEngine? _engine;
 
 _initEngine(String? route) async {
+  print('config.agoraAppId');
+
+  print(config.agoraAppId);
   _engine = await RtcEngine.createWithContext(RtcEngineContext(config.agoraAppId));
 
   await _engine!.enableVideo();

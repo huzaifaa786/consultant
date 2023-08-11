@@ -63,7 +63,7 @@ class _GeneralInfoViewState extends State<GeneralInfoView> {
                 progressIndicator: const CircularProgressIndicator(
                   color: customThemeColor,
                 ),
-                inAsyncCall: _generalController.formLoaderController!,
+                inAsyncCall: _generalController.formLoaderController,
                 child: Scaffold(
                   resizeToAvoidBottomInset: false,
                   backgroundColor: customTextFieldColor,
@@ -682,6 +682,8 @@ class _GeneralInfoViewState extends State<GeneralInfoView> {
                                           onChanged: (String? value) {
                                             setState(() {
                                               _editConsultantProfileLogic.selectedCountry = value;
+                                              _editConsultantProfileLogic.selectedCity = null;
+                                              _editConsultantProfileLogic.cityDropDownList = [];
                                             });
                                             Get.find<GeneralController>().updateFormLoaderController(true);
                                             getMethod(
