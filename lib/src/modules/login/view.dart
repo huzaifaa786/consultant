@@ -598,21 +598,21 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                         SizedBox(width: 17.w),
 
                                         ///---fb-button
-                                        InkWell(
-                                          onTap: () {
-                                            loginWithFacebook();
-                                          },
-                                          child: Container(
-                                            height: 57.h,
-                                            width: 57.w,
-                                            decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                                              BoxShadow(
-                                                  color: customLightThemeColor.withOpacity(0.2), spreadRadius: 1, blurRadius: 30, offset: const Offset(0, 15))
-                                            ]),
-                                            child: Center(child: SvgPicture.asset('assets/Icons/fbIcon.svg')),
-                                          ),
-                                        ),
-                                        SizedBox(width: 17.w),
+                                        // InkWell(
+                                        //   onTap: () {
+                                        //     loginWithFacebook();
+                                        //   },
+                                        //   child: Container(
+                                        //     height: 57.h,
+                                        //     width: 57.w,
+                                        //     decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                                        //       BoxShadow(
+                                        //           color: customLightThemeColor.withOpacity(0.2), spreadRadius: 1, blurRadius: 30, offset: const Offset(0, 15))
+                                        //     ]),
+                                        //     child: Center(child: SvgPicture.asset('assets/Icons/fbIcon.svg')),
+                                        //   ),
+                                        // ),
+                                        // SizedBox(width: 17.w),
                                       ],
                                     ),
 

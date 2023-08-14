@@ -51,23 +51,31 @@ class _ChatPageState extends State<ChatPage> {
         true,
         fetchMessagesRepo);
     pusher = PusherClient(
-      '${Get.find<MainLogic>().getConfigCredentialModel.data!.pusher![0].value}',
+      '7efbcde4745b54b662f9',
       // GlobalConfiguration().get('pusher_appId')
       PusherOptions(
-        host: '',
         cluster: 'ap2',
         // if local on android use 10.0.2.2
       ),
     );
 
-    pusher!.onConnectionStateChange((state) {});
-    pusher!.onConnectionError((error) {});
+    pusher!.onConnectionStateChange((state) {
+      print(
+          "previousState: ${state!.previousState}, currentState: ${state.currentState}");
+    });
 
-    channel = pusher!.subscribe("chat1");
+    pusher!.onConnectionError((error) {
+      print("error: ${error!.message}");
+    });
+
+    channel = pusher!.subscribe("chat");
 
     channel!.bind(r'App\Events\MessageSent', (event) {
+            print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
+      print(event!.data.toString());
+      print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@');
       setState(() {
-        responseData = event!.data.toString();
+        responseData = event.data.toString();
       });
 
       Map<String, dynamic> tempMap = jsonDecode(responseData);

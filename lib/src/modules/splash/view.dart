@@ -58,7 +58,7 @@ class _SplashPageState extends State<SplashPage> {
                 SizedBox(height: MediaQuery.of(context).size.height * .05),
                 Expanded(
                     child: Image.asset(
-                  'assets/Icons/splash_logo.png',
+                  'assets/Icons/splash_logo.jpeg',
                   width: MediaQuery.of(context).size.width * .4,
                 )),
                 SizedBox(height: MediaQuery.of(context).size.height * .2),

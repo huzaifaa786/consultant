@@ -115,11 +115,6 @@ getFcmTokenRepo(
     if (Get.find<GeneralController>().getFcmTokenModel.status == true) {
       for (var element
           in Get.find<GeneralController>().getFcmTokenModel.data!.tokens!) {
-            log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-            log(element.userId.toString());
-            log(element.deviceId.toString());
-
-            log(element.deviceKey.toString());
 
         // log('testtting ${Get.find<BookAppointmentLogic>().selectMentorAppointmentType!.fee}     ${Get.find<BookAppointmentLogic>().selectMentorAppointmentType!.appointmentTypeId}');
         postMethod(
