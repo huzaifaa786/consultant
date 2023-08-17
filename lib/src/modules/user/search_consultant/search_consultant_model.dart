@@ -253,7 +253,7 @@ class User {
     _dob = json['dob'];
     _occupation =int.tryParse(json['occupation']);
     _onlineStatus = json['online_status'];
-    _adminUser = json['admin_user'];
+    _adminUser = int.tryParse(json['admin_user']);
     _fbId = json['fb_id'];
     _googleId = json['google_id'];
     _about = json['about'];

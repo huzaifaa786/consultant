@@ -47,7 +47,7 @@ class _SearchConsultantPageState extends State<SearchConsultantPage> {
                       textInputAction: TextInputAction.search,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsetsDirectional.fromSTEB(25.w, 15.h, 25.w, 15.h),
-                        hintText: 'Search Consultant Here....',
+                        hintText: 'Search Counsellors Here....',
                         hintStyle: state.hintTextStyle,
                         fillColor: customTextFieldColor,
                         filled: true,
