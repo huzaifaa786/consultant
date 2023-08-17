@@ -70,15 +70,15 @@ class _SplashPageState extends State<SplashPage> {
                       children: [
                         SizedBox(height: MediaQuery.of(context).size.height * .1),
                         Text(
-                          'Top Notch Consultants',
+                          'KNUST Counselling Center',
                           textAlign: TextAlign.center,
                           style: state.titleTextStyle,
                         ),
-                        Text(
-                          'In One Place',
-                          textAlign: TextAlign.center,
-                          style: state.subTitleTextStyle,
-                        ),
+                        // Text(
+                        //   'In One Place',
+                        //   textAlign: TextAlign.center,
+                        //   style: state.subTitleTextStyle,
+                        // ),
                       ],
                     )),
               ],
