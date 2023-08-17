@@ -82,7 +82,7 @@ class _ConsultantProfilePageState extends State<ConsultantProfilePage> {
                       actions: const [
                         ///---notifications
 
-                        CustomNotificationIcon(color: Colors.white)
+                        // CustomNotificationIcon(color: Colors.white)
                       ],
                       bottom: PreferredSize(
                         preferredSize: const Size.fromHeight(30),

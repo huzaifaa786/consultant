@@ -72,7 +72,7 @@ class _MyCustomSliverAppBarState extends State<MyCustomSliverAppBar> {
         SizedBox(
           width: 20.w,
         ),
-        CustomNotificationIcon()
+        // CustomNotificationIcon()
       ],
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,

@@ -105,7 +105,7 @@ class _WalletPageState extends State<WalletPage> {
                           ),
                           actions: const [
                             ///---notifications
-                            CustomNotificationIcon()
+                            // CustomNotificationIcon()
                           ],
                           flexibleSpace: FlexibleSpaceBar(
                             centerTitle: true,

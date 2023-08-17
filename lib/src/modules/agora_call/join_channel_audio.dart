@@ -175,7 +175,7 @@ class _State extends State<JoinChannelAudio> {
                             color: Colors.transparent,
                             image: DecorationImage(
                                 image: AssetImage(
-                                    'assets/Icons/splash_logo.png'))),
+                                    'assets/Icons/splash_logo.jpeg'))),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * .2,
@@ -299,7 +299,7 @@ class _State extends State<JoinChannelAudio> {
                 decoration: const BoxDecoration(
                     color: Colors.transparent,
                     image: DecorationImage(
-                        image: AssetImage('assets/Icons/splash_logo.png'))),
+                        image: AssetImage('assets/Icons/splash_logo.jpeg'))),
               ),
               isJoined
                   ? Padding(

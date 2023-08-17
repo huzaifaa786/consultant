@@ -145,7 +145,7 @@ class _ChatPageState extends State<ChatPage> {
                       actions: const [
                         ///---notifications
 
-                        CustomNotificationIcon()
+                        // CustomNotificationIcon()
                       ],
                       flexibleSpace: FlexibleSpaceBar(
                         centerTitle: true,

@@ -260,7 +260,7 @@ class _UserDrawerPageState extends State<UserDrawerPage> {
                                                 color: Colors.transparent,
                                                 image: DecorationImage(
                                                     image: AssetImage(
-                                                        'assets/Icons/splash_logo.png'))),
+                                                        'assets/Icons/splash_logo.jpeg'))),
                                           ),
                                           SizedBox(
                                             width: 15.w,
@@ -288,7 +288,7 @@ class _UserDrawerPageState extends State<UserDrawerPage> {
                                               CrossAxisAlignment.center,
                                           children: [
                                             SvgPicture.asset(
-                                                'assets/Icons/drawerBackArrowIcon.svg'),
+                                                'assets/Icons/drawerBackArrowIcon.svg',color: Colors.white,),
                                           ],
                                         ),
                                       )),

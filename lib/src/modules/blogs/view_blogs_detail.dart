@@ -60,7 +60,7 @@ class _BlogDetailPage extends State<BlogDetailPage> {
                       actions: const [
                         ///---notifications
 
-                        CustomNotificationIcon(color: Colors.white)
+                        // CustomNotificationIcon(color: Colors.white)
                       ],
                       bottom: PreferredSize(
                         preferredSize: const Size.fromHeight(30),

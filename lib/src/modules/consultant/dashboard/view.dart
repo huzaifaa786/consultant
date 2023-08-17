@@ -164,7 +164,7 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
                                     actions: const [
                                       ///---notifications
 
-                                      CustomNotificationIcon()
+                                      // CustomNotificationIcon()
                                     ],
                                     flexibleSpace: FlexibleSpaceBar(
                                       centerTitle: true,
@@ -874,25 +874,25 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
                                                                             ),
 
                                                                             ///---amount
-                                                                            Expanded(
-                                                                              child: Column(
-                                                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                                                                children: [
-                                                                                  Text(
-                                                                                    LanguageConstant.amount.tr,
-                                                                                    style: state.appointmentListLabelTextStyle,
-                                                                                  ),
-                                                                                  const SizedBox(
-                                                                                    height: 6,
-                                                                                  ),
-                                                                                  Text(
-                                                                                    '${LanguageConstant.rs.tr}.${_dashboardLogic.getTodayAppointmentList[index].payment}',
-                                                                                    style: state.appointmentListValueTextStyle?.copyWith(color: customLightThemeColor),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                            ),
+                                                                            // Expanded(
+                                                                            //   child: Column(
+                                                                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                                                                            //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                                            //     children: [
+                                                                            //       Text(
+                                                                            //         LanguageConstant.amount.tr,
+                                                                            //         style: state.appointmentListLabelTextStyle,
+                                                                            //       ),
+                                                                            //       const SizedBox(
+                                                                            //         height: 6,
+                                                                            //       ),
+                                                                            //       Text(
+                                                                            //         '${LanguageConstant.rs.tr}.${_dashboardLogic.getTodayAppointmentList[index].payment}',
+                                                                            //         style: state.appointmentListValueTextStyle?.copyWith(color: customLightThemeColor),
+                                                                            //       ),
+                                                                            //     ],
+                                                                            //   ),
+                                                                            // ),
 
                                                                             ///---status
                                                                             Expanded(
@@ -981,54 +981,54 @@ class _ConsultantDashboardPageState extends State<ConsultantDashboardPage> {
                                                                                 ),
 
                                                                                 ///---payment-status
-                                                                                Expanded(
-                                                                                  child: Column(
-                                                                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        LanguageConstant.pStatus.tr,
-                                                                                        style: state.appointmentListLabelTextStyle,
-                                                                                      ),
-                                                                                      const SizedBox(
-                                                                                        height: 6,
-                                                                                      ),
-                                                                                      _dashboardLogic.getTodayAppointmentList[index].isPaid == 0
-                                                                                          ? Row(
-                                                                                              children: [
-                                                                                                const Icon(
-                                                                                                  Icons.cancel_outlined,
-                                                                                                  color: Colors.red,
-                                                                                                  size: 10,
-                                                                                                ),
-                                                                                                const SizedBox(
-                                                                                                  width: 5,
-                                                                                                ),
-                                                                                                Text(
-                                                                                                  LanguageConstant.unPaid.tr,
-                                                                                                  style: state.appointmentListValueTextStyle,
-                                                                                                ),
-                                                                                              ],
-                                                                                            )
-                                                                                          : Row(
-                                                                                              children: [
-                                                                                                const Icon(
-                                                                                                  Icons.check,
-                                                                                                  color: customThemeColor,
-                                                                                                  size: 10,
-                                                                                                ),
-                                                                                                const SizedBox(
-                                                                                                  width: 5,
-                                                                                                ),
-                                                                                                Text(
-                                                                                                  LanguageConstant.paid.tr,
-                                                                                                  style: state.appointmentListValueTextStyle,
-                                                                                                ),
-                                                                                              ],
-                                                                                            ),
-                                                                                    ],
-                                                                                  ),
-                                                                                ),
+                                                                                // Expanded(
+                                                                                //   child: Column(
+                                                                                //     crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                                                //     children: [
+                                                                                //       Text(
+                                                                                //         LanguageConstant.pStatus.tr,
+                                                                                //         style: state.appointmentListLabelTextStyle,
+                                                                                //       ),
+                                                                                //       const SizedBox(
+                                                                                //         height: 6,
+                                                                                //       ),
+                                                                                //       _dashboardLogic.getTodayAppointmentList[index].isPaid == 0
+                                                                                //           ? Row(
+                                                                                //               children: [
+                                                                                //                 const Icon(
+                                                                                //                   Icons.cancel_outlined,
+                                                                                //                   color: Colors.red,
+                                                                                //                   size: 10,
+                                                                                //                 ),
+                                                                                //                 const SizedBox(
+                                                                                //                   width: 5,
+                                                                                //                 ),
+                                                                                //                 Text(
+                                                                                //                   LanguageConstant.unPaid.tr,
+                                                                                //                   style: state.appointmentListValueTextStyle,
+                                                                                //                 ),
+                                                                                //               ],
+                                                                                //             )
+                                                                                //           : Row(
+                                                                                //               children: [
+                                                                                //                 const Icon(
+                                                                                //                   Icons.check,
+                                                                                //                   color: customThemeColor,
+                                                                                //                   size: 10,
+                                                                                //                 ),
+                                                                                //                 const SizedBox(
+                                                                                //                   width: 5,
+                                                                                //                 ),
+                                                                                //                 Text(
+                                                                                //                   LanguageConstant.paid.tr,
+                                                                                //                   style: state.appointmentListValueTextStyle,
+                                                                                //                 ),
+                                                                                //               ],
+                                                                                //             ),
+                                                                                //     ],
+                                                                                //   ),
+                                                                                // ),
                                                                                 SizedBox(
                                                                                   width: MediaQuery.of(context).size.width * .08,
                                                                                 )

@@ -101,7 +101,7 @@ class _ConsultantAppointmentDetailPageState extends State<ConsultantAppointmentD
                       actions: const [
                         ///---notifications
 
-                        CustomNotificationIcon()
+                        // CustomNotificationIcon()
                       ],
                       flexibleSpace: FlexibleSpaceBar(
                         centerTitle: true,

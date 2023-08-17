@@ -94,7 +94,7 @@ class _UserHomePageState extends State<UserHomePage> {
                       ),
                       actions: const [
                         ///---notifications
-                        CustomNotificationIcon(color: Colors.white,)
+                        // CustomNotificationIcon(color: Colors.white,)
                       ],
                       flexibleSpace: FlexibleSpaceBar(
                         centerTitle: true,

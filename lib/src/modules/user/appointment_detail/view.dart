@@ -109,7 +109,7 @@ class _AppointmentDetailPageState extends State<AppointmentDetailPage> {
                       actions: const [
                         ///---notifications
 
-                        CustomNotificationIcon()
+                        // CustomNotificationIcon()
                       ],
                       flexibleSpace: FlexibleSpaceBar(
                         centerTitle: true,
