@@ -159,8 +159,7 @@ class _ScheduleCreatePageState extends State<ScheduleCreatePage> {
                                                           SarabunFontFamily
                                                               .bold,
                                                       fontSize: 28.sp,
-                                                      color:
-                                                          Colors.white),
+                                                      color: Colors.white),
                                                 ),
                                                 SizedBox(
                                                   height: 10.h,

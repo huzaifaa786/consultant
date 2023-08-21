@@ -83,7 +83,7 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                             Get.find<GeneralController>().storageBox.remove('fcmToken');
                             Get.offAllNamed(PageRoutes.userHome);
                           },
-                          child: const Icon(Icons.logout, color: Colors.red)),
+                          child: const Icon(Icons.logout, color: Colors.white)),
                       flexibleSpace: FlexibleSpaceBar(
                         centerTitle: true,
                         background: Container(

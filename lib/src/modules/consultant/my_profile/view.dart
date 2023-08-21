@@ -1128,128 +1128,128 @@ class _ConsultantMyProfilePageState extends State<ConsultantMyProfilePage> {
                           ),
 
                           ///---account-info
-                          Container(
-                              width: MediaQuery.of(context).size.width,
-                              decoration: BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.2),
-                                  spreadRadius: 3,
-                                  blurRadius: 15,
-                                  // offset: Offset(1,5)
-                                )
-                              ], borderRadius: BorderRadius.circular(8.r), color: Colors.white),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.w),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      LanguageConstant.accountInfo.tr.capitalize!,
-                                      style: state.sectionHeadingTextStyle,
-                                    ),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    Column(
-                                      children: [
-                                        ///---bank
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Expanded(
-                                              child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    LanguageConstant.bank.tr,
-                                                    style: state.previewLabelTextStyle,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 4,
-                                                  ),
-                                                  Text(
-                                                    '${_generalController.getConsultantProfileModel.data!.userDetail!.cardDetail!.bank}',
-                                                    softWrap: true,
-                                                    overflow: TextOverflow.ellipsis,
-                                                    maxLines: 1,
-                                                    style: state.previewValueTextStyle,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
+                          // Container(
+                          //     width: MediaQuery.of(context).size.width,
+                          //     decoration: BoxDecoration(boxShadow: [
+                          //       BoxShadow(
+                          //         color: Colors.grey.withOpacity(0.2),
+                          //         spreadRadius: 3,
+                          //         blurRadius: 15,
+                          //         // offset: Offset(1,5)
+                          //       )
+                          //     ], borderRadius: BorderRadius.circular(8.r), color: Colors.white),
+                          //     child: Padding(
+                          //       padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.w),
+                          //       child: Column(
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: [
+                          //           Text(
+                          //             LanguageConstant.accountInfo.tr.capitalize!,
+                          //             style: state.sectionHeadingTextStyle,
+                          //           ),
+                          //           SizedBox(
+                          //             height: 20.h,
+                          //           ),
+                          //           Column(
+                          //             children: [
+                          //               ///---bank
+                          //               Row(
+                          //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //                 children: [
+                          //                   Expanded(
+                          //                     child: Column(
+                          //                       mainAxisAlignment: MainAxisAlignment.start,
+                          //                       crossAxisAlignment: CrossAxisAlignment.start,
+                          //                       children: [
+                          //                         Text(
+                          //                           LanguageConstant.bank.tr,
+                          //                           style: state.previewLabelTextStyle,
+                          //                         ),
+                          //                         const SizedBox(
+                          //                           height: 4,
+                          //                         ),
+                          //                         Text(
+                          //                           '${_generalController.getConsultantProfileModel.data!.userDetail!.cardDetail!.bank}',
+                          //                           softWrap: true,
+                          //                           overflow: TextOverflow.ellipsis,
+                          //                           maxLines: 1,
+                          //                           style: state.previewValueTextStyle,
+                          //                         ),
+                          //                       ],
+                          //                     ),
+                          //                   ),
+                          //                 ],
+                          //               ),
 
-                                        SizedBox(
-                                          height: 18.h,
-                                        ),
+                          //               SizedBox(
+                          //                 height: 18.h,
+                          //               ),
 
-                                        ///---account-name
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Expanded(
-                                              child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    LanguageConstant.accountTitle.tr,
-                                                    style: state.previewLabelTextStyle,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 4,
-                                                  ),
-                                                  Text(
-                                                    '${_generalController.getConsultantProfileModel.data!.userDetail!.cardDetail!.accountTitle}',
-                                                    softWrap: true,
-                                                    overflow: TextOverflow.ellipsis,
-                                                    maxLines: 1,
-                                                    style: state.previewValueTextStyle,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 18.h,
-                                        ),
+                          //               ///---account-name
+                          //               Row(
+                          //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //                 children: [
+                          //                   Expanded(
+                          //                     child: Column(
+                          //                       mainAxisAlignment: MainAxisAlignment.start,
+                          //                       crossAxisAlignment: CrossAxisAlignment.start,
+                          //                       children: [
+                          //                         Text(
+                          //                           LanguageConstant.accountTitle.tr,
+                          //                           style: state.previewLabelTextStyle,
+                          //                         ),
+                          //                         const SizedBox(
+                          //                           height: 4,
+                          //                         ),
+                          //                         Text(
+                          //                           '${_generalController.getConsultantProfileModel.data!.userDetail!.cardDetail!.accountTitle}',
+                          //                           softWrap: true,
+                          //                           overflow: TextOverflow.ellipsis,
+                          //                           maxLines: 1,
+                          //                           style: state.previewValueTextStyle,
+                          //                         ),
+                          //                       ],
+                          //                     ),
+                          //                   ),
+                          //                 ],
+                          //               ),
+                          //               SizedBox(
+                          //                 height: 18.h,
+                          //               ),
 
-                                        ///---account-number
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Expanded(
-                                              child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    LanguageConstant.accountNumber.tr,
-                                                    style: state.previewLabelTextStyle,
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 4,
-                                                  ),
-                                                  Text(
-                                                    '${_generalController.getConsultantProfileModel.data!.userDetail!.cardDetail!.accountNumber}',
-                                                    softWrap: true,
-                                                    overflow: TextOverflow.ellipsis,
-                                                    maxLines: 1,
-                                                    style: state.previewValueTextStyle,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )),
+                          //               ///---account-number
+                          //               Row(
+                          //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //                 children: [
+                          //                   Expanded(
+                          //                     child: Column(
+                          //                       mainAxisAlignment: MainAxisAlignment.start,
+                          //                       crossAxisAlignment: CrossAxisAlignment.start,
+                          //                       children: [
+                          //                         Text(
+                          //                           LanguageConstant.accountNumber.tr,
+                          //                           style: state.previewLabelTextStyle,
+                          //                         ),
+                          //                         const SizedBox(
+                          //                           height: 4,
+                          //                         ),
+                          //                         Text(
+                          //                           '${_generalController.getConsultantProfileModel.data!.userDetail!.cardDetail!.accountNumber}',
+                          //                           softWrap: true,
+                          //                           overflow: TextOverflow.ellipsis,
+                          //                           maxLines: 1,
+                          //                           style: state.previewValueTextStyle,
+                          //                         ),
+                          //                       ],
+                          //                     ),
+                          //                   ),
+                          //                 ],
+                          //               ),
+                          //             ],
+                          //           ),
+                          //         ],
+                          //       ),
+                          //     )),
                           SizedBox(
                             height: 20.h,
                           ),

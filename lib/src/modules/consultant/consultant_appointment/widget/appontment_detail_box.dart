@@ -128,36 +128,36 @@ class AppointmentDetailBox extends StatelessWidget {
 
                 ///---type-fee
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     ///---type
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.centerRight,
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.only(end: 11.w),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                    // Expanded(
+                    //   child: Align(
+                    //     alignment: Alignment.center,
+                    //     child: Padding(
+                    //       padding: EdgeInsetsDirectional.only(end: 11.w),
+                    //       child: Row(
+                    //         mainAxisAlignment: MainAxisAlignment.start,
                           
-                            children: [
-                              // SvgPicture.asset(
-                              //   'assets/Icons/feeIcon.svg',
-                              //   height: 16.h,
-                              //   width: 18.w,
-                              // ),
+                    //         children: [
+                    //           // SvgPicture.asset(
+                    //           //   'assets/Icons/feeIcon.svg',
+                    //           //   height: 16.h,
+                    //           //   width: 18.w,
+                    //           // ),
                               SizedBox(
                                 width: 11.w,
                               ),
-                              // Text(
-                              //   fee!,
-                              //   style: _consultantAppointmentLogic.state.feeTextStyle,
-                              // )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                    //           // Text(
+                    //           //   fee!,
+                    //           //   style: _consultantAppointmentLogic.state.feeTextStyle,
+                    //           // )
+                    //         ],
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
 
                     ///---fee
                     Expanded(
@@ -166,7 +166,7 @@ class AppointmentDetailBox extends StatelessWidget {
                         child: Padding(
                           padding: EdgeInsetsDirectional.only(start: 11.w),
                           child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               SvgPicture.asset(

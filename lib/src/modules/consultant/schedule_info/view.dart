@@ -1,39 +1,39 @@
-//
-//
+
+
 // import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:flutter_svg/svg.dart';
 // import 'package:get/get.dart';
 // import 'package:resize/resize.dart';
-//
+
 // import '../../../../route_generator.dart';
 // import '../../../controller/general_controller.dart';
 // import '../../../utils/colors.dart';
 // import '../../../utils/constants.dart';
 // import '../../../widgets/custom_bottom_bar.dart';
 // import 'logic.dart';
-//
+
 // class ScheduleInfoPage extends StatefulWidget {
 //   const ScheduleInfoPage({Key? key}) : super(key: key);
-//
+
 //   @override
 //   State<ScheduleInfoPage> createState() => _ScheduleInfoPageState();
 // }
-//
+
 // class _ScheduleInfoPageState extends State<ScheduleInfoPage> {
 //   final logic = Get.put(ScheduleInfoLogic());
-//
+
 //   final state = Get.find<ScheduleInfoLogic>().state;
-//
+
 //   @override
 //   void initState() {
 //     // TODO: implement initState
 //     super.initState();
-//
+
 //     Get.find<ScheduleInfoLogic>().scrollController = ScrollController()
 //       ..addListener(Get.find<ScheduleInfoLogic>().scrollListener);
 //   }
-//
+
 //   @override
 //   void dispose() {
 //     Get.find<ScheduleInfoLogic>()
@@ -42,7 +42,7 @@
 //     Get.find<ScheduleInfoLogic>().scrollController!.dispose();
 //     super.dispose();
 //   }
-//
+
 //   @override
 //   Widget build(BuildContext context) {
 //     return GetBuilder<GeneralController>(builder: (_generalController) {
@@ -174,7 +174,7 @@
 //                                 SizedBox(
 //                                   height: 25.h,
 //                                 ),
-//
+
 //                                 ///---type-charges
 //                                 Row(
 //                                   children: [
@@ -294,7 +294,7 @@
 //                                         ),
 //                                       ),
 //                                     ),
-//
+
 //                                     ///---charges
 //                                     Expanded(
 //                                       child: Padding(
@@ -348,7 +348,7 @@
 //                                     ),
 //                                   ],
 //                                 ),
-//
+
 //                                 ///---holiday-selector
 //                                 _mentorScheduleLogic.selectedScheduleType == null
 //                                     ? const SizedBox()
@@ -406,10 +406,10 @@
 //                                                           index]
 //                                                               .isSelected!;
 //                                                         });
-//
+
 //                                                         Map<String, dynamic>
 //                                                         tempHolidayMap = {};
-//
+
 //                                                         for (var element
 //                                                         in _mentorScheduleLogic
 //                                                             .dayListForHoliday) {
@@ -499,7 +499,7 @@
 //                                 SizedBox(
 //                                   height: 20.h,
 //                                 ),
-//
+
 //                                 ///---generate-slots
 //                                 _mentorScheduleLogic.selectedScheduleType == null
 //                                     ? const SizedBox()
@@ -512,7 +512,7 @@
 //                                     .selectedScheduleType!)]
 //                                     .isScheduleRequired ==
 //                                     0
-//
+
 //                                 ///---save-button-for-without-schedule
 //                                     ? Padding(
 //                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -525,7 +525,7 @@
 //                                         if (!currentFocus.hasPrimaryFocus) {
 //                                           currentFocus.unfocus();
 //                                         }
-//
+
 //                                         if (_scheduleInfoFormKey.currentState!
 //                                             .validate()) {
 //                                           _generalController
@@ -588,7 +588,7 @@
 //                                         SizedBox(
 //                                           height: 12.h,
 //                                         ),
-//
+
 //                                         ///---day-duration
 //                                         Row(
 //                                           children: [
@@ -736,7 +736,7 @@
 //                                             const SizedBox(
 //                                               width: 10,
 //                                             ),
-//
+
 //                                             ///---duration
 //                                             Expanded(
 //                                                 child: Column(
@@ -856,7 +856,7 @@
 //                                         SizedBox(
 //                                           height: 12.h,
 //                                         ),
-//
+
 //                                         ///---times
 //                                         Row(
 //                                           children: [
@@ -895,7 +895,7 @@
 //                                                                 ),
 //                                                               );
 //                                                             });
-//
+
 //                                                         if (picked != null) {
 //                                                           setState(() {
 //                                                             _mentorScheduleLogic
@@ -908,7 +908,7 @@
 //                                                                     .toString()
 //                                                                     .substring(11);
 //                                                             log('---START-TIME-PICKED->>${_mentorScheduleLogic.selectedTimeForStartForCalculate}');
-//
+
 //                                                             _mentorScheduleLogic
 //                                                                 .selectedTimeForStart =
 //                                                                 picked
@@ -1002,7 +1002,7 @@
 //                                             const SizedBox(
 //                                               width: 10,
 //                                             ),
-//
+
 //                                             ///---end-time
 //                                             Expanded(
 //                                                 child: Column(
@@ -1038,7 +1038,7 @@
 //                                                                 ),
 //                                                               );
 //                                                             });
-//
+
 //                                                         if (picked != null) {
 //                                                           setState(() {
 //                                                             _mentorScheduleLogic
@@ -1051,7 +1051,7 @@
 //                                                                     .toString()
 //                                                                     .substring(11);
 //                                                             log('---END-TIME-PICKED->>${_mentorScheduleLogic.selectedTimeForEndForCalculate}');
-//
+
 //                                                             _mentorScheduleLogic
 //                                                                 .selectedTimeForEnd =
 //                                                                 picked
@@ -1144,7 +1144,7 @@
 //                                                 )),
 //                                           ],
 //                                         ),
-//
+
 //                                         ///---generate-slot-button
 //                                         Padding(
 //                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -1158,7 +1158,7 @@
 //                                                     .hasPrimaryFocus) {
 //                                                   currentFocus.unfocus();
 //                                                 }
-//
+
 //                                                 if (_scheduleInfoFormKey
 //                                                     .currentState!
 //                                                     .validate() &&
@@ -1199,7 +1199,7 @@
 //                                                               .durationController
 //                                                               .text
 //                                                               .toString()));
-//
+
 //                                                   _mentorScheduleLogic.slotsList =
 //                                                       _mentorScheduleLogic
 //                                                           .getTimes(startTime,
@@ -1253,7 +1253,7 @@
 //                                         const SizedBox(
 //                                           height: 30,
 //                                         ),
-//
+
 //                                         ///---slots
 //                                         _mentorScheduleLogic.slotsList.isEmpty
 //                                             ? const SizedBox()
@@ -1301,7 +1301,7 @@
 //                                             ),
 //                                           ],
 //                                         ),
-//
+
 //                                         const SizedBox(
 //                                           height: 12,
 //                                         ),
@@ -1309,7 +1309,7 @@
 //                                     ),
 //                                   ),
 //                                 ),
-//
+
 //                                 ///---save-button-for-schedule
 //                                 _mentorScheduleLogic.slotsList.isEmpty
 //                                     ? const SizedBox()
@@ -1324,7 +1324,7 @@
 //                                         if (!currentFocus.hasPrimaryFocus) {
 //                                           currentFocus.unfocus();
 //                                         }
-//
+
 //                                         _generalController
 //                                             .updateFormLoaderController(true);
 //                                         postMethod(
@@ -1366,7 +1366,7 @@
 //                                     ),
 //                                   ),
 //                                 ),
-//
+
 //                                 ///---added-record-preview
 //                                 Padding(
 //                                     padding:
@@ -1431,7 +1431,7 @@
 //                                                             ],
 //                                                           ),
 //                                                         ),
-//
+
 //                                                         ///---fee-day
 //                                                         Expanded(
 //                                                           child: Column(
@@ -1490,7 +1490,7 @@
 //                                                         )
 //                                                       ],
 //                                                     ),
-//
+
 //                                                     const SizedBox(
 //                                                       height: 14,
 //                                                     ),
@@ -1614,11 +1614,11 @@
 //                                                         )
 //                                                       ],
 //                                                     ),
-//
+
 //                                                     const SizedBox(
 //                                                       height: 14,
 //                                                     ),
-//
+
 //                                                     ///---fee-day
 //                                                     Row(
 //                                                       children: [

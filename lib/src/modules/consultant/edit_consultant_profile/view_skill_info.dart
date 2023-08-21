@@ -357,10 +357,18 @@ class _SkillInfoViewState extends State<SkillInfoView> {
                       if ((_editConsultantProfileLogic.skillInfoPostModel.data != null && _editConsultantProfileLogic.forDisplaySkillList!.isEmpty) ||
                           (_editConsultantProfileLogic.skillInfoPostModel.data == null && _editConsultantProfileLogic.forDisplaySkillList!.isNotEmpty)) {
                         setState(() {
-                          _editConsultantProfileLogic.stepperList[_editConsultantProfileLogic.stepperIndex!].isSelected = false;
-                          _editConsultantProfileLogic.stepperList[_editConsultantProfileLogic.stepperIndex!].isCompleted = true;
-                          _editConsultantProfileLogic.stepperList[_editConsultantProfileLogic.stepperIndex! + 1].isSelected = true;
-                          _editConsultantProfileLogic.updateStepperIndex(4);
+                          _editConsultantProfileLogic
+                              .stepperList[
+                                  _editConsultantProfileLogic.stepperIndex!]
+                              .isSelected = false;
+                          _editConsultantProfileLogic
+                              .stepperList[
+                                  _editConsultantProfileLogic.stepperIndex!]
+                              .isCompleted = true;
+                          // _editConsultantProfileLogic.stepperList[_editConsultantProfileLogic.stepperIndex!].isSelected = false;
+                          // _editConsultantProfileLogic.stepperList[_editConsultantProfileLogic.stepperIndex!].isCompleted = true;
+                          // _editConsultantProfileLogic.stepperList[_editConsultantProfileLogic.stepperIndex! + 1].isSelected = true;
+                          // _editConsultantProfileLogic.updateStepperIndex(3);
                         });
                       } else {
                         showDialog(

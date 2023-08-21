@@ -32,7 +32,7 @@ class UserDrawerLogic extends GetxController {
     DrawerTile(
         title: LanguageConstant.aboutUs.tr,
         icon: 'assets/Icons/drawerPrivacyIcon.svg'),
-    DrawerTile(title: 'Languages', icon: 'assets/Icons/language.svg'),
+    // DrawerTile(title: 'Languages', icon: 'assets/Icons/language.svg'),
     DrawerTile(
         title: LanguageConstant.logout.tr,
         icon: 'assets/Icons/drawerLogoutIcon.svg'),
@@ -53,7 +53,7 @@ class UserDrawerLogic extends GetxController {
     DrawerTile(
         title: LanguageConstant.aboutUs.tr,
         icon: 'assets/Icons/drawerPrivacyIcon.svg'),
-    DrawerTile(title: 'Languages', icon: 'assets/Icons/language.svg'),
+    // DrawerTile(title: 'Languages', icon: 'assets/Icons/language.svg'),
   ];
 
   userLoginDrawerNavigation(
@@ -101,12 +101,12 @@ class UserDrawerLogic extends GetxController {
           Get.back();
           return Get.toNamed(PageRoutes.aboutUs);
         }
+      // case 7:
+      //   {
+      //     return Get.find<GeneralController>()
+      //         .customDropDownDialogForLocale(context);
+      //   }
       case 7:
-        {
-          return Get.find<GeneralController>()
-              .customDropDownDialogForLocale(context);
-        }
-      case 8:
         {
           Get.find<GeneralController>().storageBox.remove('userID');
           Get.find<GeneralController>().storageBox.remove('authToken');
@@ -157,11 +157,11 @@ class UserDrawerLogic extends GetxController {
           Get.back();
           return Get.toNamed(PageRoutes.aboutUs);
         }
-      case 5:
-        {
-          return Get.find<GeneralController>()
-              .customDropDownDialogForLocale(context);
-        }
+      // case 5:
+      //   {
+      //     return Get.find<GeneralController>()
+      //         .customDropDownDialogForLocale(context);
+      //   }
       default:
         {
           return Scaffold(

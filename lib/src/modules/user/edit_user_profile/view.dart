@@ -182,7 +182,7 @@ class _EditUserProfilePageState extends State<EditUserProfilePage> {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(25.0),
                           topRight: Radius.circular(25.0))),
-                  child: _generalController.formLoaderController!
+                  child: _generalController.formLoaderController
                       ? const Center(child: CircularProgressIndicator())
                       : Stack(children: [
                           SingleChildScrollView(

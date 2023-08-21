@@ -65,6 +65,9 @@ mentorSkillInfoRepo(BuildContext context, bool responseCheck, Map<String, dynami
     if (Get.find<CreateProfileLogic>().skillInfoPostModel.status == true) {
       Get.snackbar('${LanguageConstant.skillAddedSuccessfully.tr}!', '', colorText: Colors.black, backgroundColor: Colors.white);
       Get.find<GeneralController>().updateFormLoaderController(false);
+      // Get.find<CreateProfileLogic>().stepperList[Get.find<CreateProfileLogic>().stepperIndex!].isSelected = false;
+      // Get.find<CreateProfileLogic>().stepperList[Get.find<CreateProfileLogic>().stepperIndex!].isCompleted = true;
+      // postMethod(context, mentorProfileStatusUrl, {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')}, true, mentorProfileStatusChangeRepo);
     } else {
       Get.find<GeneralController>().updateFormLoaderController(false);
     }
@@ -73,20 +76,20 @@ mentorSkillInfoRepo(BuildContext context, bool responseCheck, Map<String, dynami
   }
 }
 
-mentorAccountInfoRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
-  if (responseCheck) {
-    Get.find<CreateProfileLogic>().accountInfoPostModel = AccountInfoPostModel.fromJson(response);
-    if (Get.find<CreateProfileLogic>().accountInfoPostModel.status == true) {
-      Get.find<CreateProfileLogic>().stepperList[Get.find<CreateProfileLogic>().stepperIndex!].isSelected = false;
-      Get.find<CreateProfileLogic>().stepperList[Get.find<CreateProfileLogic>().stepperIndex!].isCompleted = true;
-      postMethod(context, mentorProfileStatusUrl, {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')}, true, mentorProfileStatusChangeRepo);
-    } else {
-      Get.find<GeneralController>().updateFormLoaderController(false);
-    }
-  } else if (!responseCheck) {
-    Get.find<GeneralController>().updateFormLoaderController(false);
-  }
-}
+// mentorAccountInfoRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+//   if (responseCheck) {
+//     Get.find<CreateProfileLogic>().accountInfoPostModel = AccountInfoPostModel.fromJson(response);
+//     if (Get.find<CreateProfileLogic>().accountInfoPostModel.status == true) {
+//       Get.find<CreateProfileLogic>().stepperList[Get.find<CreateProfileLogic>().stepperIndex!].isSelected = false;
+//       Get.find<CreateProfileLogic>().stepperList[Get.find<CreateProfileLogic>().stepperIndex!].isCompleted = true;
+//       postMethod(context, mentorProfileStatusUrl, {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')}, true, mentorProfileStatusChangeRepo);
+//     } else {
+//       Get.find<GeneralController>().updateFormLoaderController(false);
+//     }
+//   } else if (!responseCheck) {
+//     Get.find<GeneralController>().updateFormLoaderController(false);
+//   }
+// }
 
 mentorProfileStatusChangeRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {

@@ -52,7 +52,7 @@ class CreateProfileLogic extends GetxController {
     Stepper(title: '${LanguageConstant.educational.tr}\n${LanguageConstant.info.tr}', stepperLabel: '02', isSelected: false, isCompleted: false),
     Stepper(title: '${LanguageConstant.experience.tr}\n${LanguageConstant.info.tr}', stepperLabel: '03', isSelected: false, isCompleted: false),
     Stepper(title: LanguageConstant.skillInfo.tr, stepperLabel: '04', isSelected: false, isCompleted: false),
-    Stepper(title: '${LanguageConstant.account.tr}\n${LanguageConstant.info.tr}', stepperLabel: '05', isSelected: false, isCompleted: false),
+    // Stepper(title: '${LanguageConstant.account.tr}\n${LanguageConstant.info.tr}', stepperLabel: '05', isSelected: false, isCompleted: false),
   ];
 
   consultantProfileNavigation(
@@ -74,12 +74,12 @@ class CreateProfileLogic extends GetxController {
         }
       case 3:
         {
-          return const SkillInfoView();
+          return showConfirmation! ? const ConfirmationView() : const SkillInfoView();
         }
-      case 4:
-        {
-          return showConfirmation! ? const ConfirmationView() : const AccountInfoView();
-        }
+      // case 4:
+      //   {
+      //     return showConfirmation! ? const ConfirmationView() : const AccountInfoView();
+      //   }
       default:
         {
           return Scaffold(

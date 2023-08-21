@@ -80,6 +80,15 @@ mentorSkillInfoRepo(
         true) {
       Get.snackbar('${LanguageConstant.skillAddedSuccessfully.tr}!', '',
           colorText: Colors.black, backgroundColor: Colors.white);
+          postMethod(
+          context,
+          mentorProfileStatusUrl,
+          {
+            'token': '123',
+            'mentor_id': Get.find<GeneralController>().storageBox.read('userID')
+          },
+          true,
+          mentorProfileStatusChangeRepo);
       Get.find<GeneralController>().updateFormLoaderController(false);
     } else {
       Get.find<GeneralController>().updateFormLoaderController(false);
