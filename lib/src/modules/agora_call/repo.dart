@@ -109,13 +109,13 @@ updateFcmTokenRepo(
 
 getFcmTokenRepo(
     BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+
   if (responseCheck) {
     Get.find<GeneralController>().getFcmTokenModel =
         GetFcmTokenModel.fromJson(response);
     if (Get.find<GeneralController>().getFcmTokenModel.status == true) {
       for (var element
           in Get.find<GeneralController>().getFcmTokenModel.data!.tokens!) {
-
         // log('testtting ${Get.find<BookAppointmentLogic>().selectMentorAppointmentType!.fee}     ${Get.find<BookAppointmentLogic>().selectMentorAppointmentType!.appointmentTypeId}');
         postMethod(
             context,

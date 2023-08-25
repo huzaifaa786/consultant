@@ -11,13 +11,17 @@ import 'package:consultant_product/src/modules/sms/repo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-mentorCompleteAppointmentRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+mentorCompleteAppointmentRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
     if (response['Status'].toString() == 'true') {
       getMethod(
           context,
           getConsultantAllAppointmentsURL,
-          {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')},
+          {
+            'token': '123',
+            'mentor_id': Get.find<GeneralController>().storageBox.read('userID')
+          },
           true,
           getConsultantAllAppointmentsRepo);
 
@@ -34,8 +38,16 @@ mentorCompleteAppointmentRepo(BuildContext context, bool responseCheck, Map<Stri
           sendSMSRepo);
 
       ///----fcm-send-start
-      getMethod(context, fcmGetUrl, {'token': '123', 'user_id': Get.find<GeneralController>().userIdForSendNotification}, true,
+      getMethod(
+          context,
+          fcmGetUrl,
+          {
+            'token': '123',
+            'user_id': Get.find<GeneralController>().userIdForSendNotification
+          },
+          true,
           getFcmTokenRepo);
+
       Get.find<GeneralController>().updateFormLoaderController(false);
       Get.snackbar(LanguageConstant.appointmentCompletedSuccessfully.tr, '',
           colorText: Colors.black, backgroundColor: Colors.white);
@@ -47,13 +59,17 @@ mentorCompleteAppointmentRepo(BuildContext context, bool responseCheck, Map<Stri
   }
 }
 
-mentorAcceptAppointmentRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+mentorAcceptAppointmentRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
     if (response['Status'].toString() == 'true') {
       getMethod(
           context,
           getConsultantAllAppointmentsURL,
-          {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')},
+          {
+            'token': '123',
+            'mentor_id': Get.find<GeneralController>().storageBox.read('userID')
+          },
           true,
           getConsultantAllAppointmentsRepo);
 
@@ -70,7 +86,14 @@ mentorAcceptAppointmentRepo(BuildContext context, bool responseCheck, Map<String
           sendSMSRepo);
 
       ///----fcm-send-start
-      getMethod(context, fcmGetUrl, {'token': '123', 'user_id': Get.find<GeneralController>().userIdForSendNotification}, true,
+      getMethod(
+          context,
+          fcmGetUrl,
+          {
+            'token': '123',
+            'user_id': Get.find<GeneralController>().userIdForSendNotification
+          },
+          true,
           getFcmTokenRepo);
 
       Get.find<GeneralController>().updateFormLoaderController(false);
@@ -84,13 +107,17 @@ mentorAcceptAppointmentRepo(BuildContext context, bool responseCheck, Map<String
   }
 }
 
-mentorRejectAppointmentRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+mentorRejectAppointmentRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
     if (response['Status'].toString() == 'true') {
       getMethod(
           context,
           getConsultantAllAppointmentsURL,
-          {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')},
+          {
+            'token': '123',
+            'mentor_id': Get.find<GeneralController>().storageBox.read('userID')
+          },
           true,
           getConsultantAllAppointmentsRepo);
 
@@ -107,7 +134,14 @@ mentorRejectAppointmentRepo(BuildContext context, bool responseCheck, Map<String
           sendSMSRepo);
 
       ///----fcm-send-start
-      getMethod(context, fcmGetUrl, {'token': '123', 'user_id': Get.find<GeneralController>().userIdForSendNotification}, true,
+      getMethod(
+          context,
+          fcmGetUrl,
+          {
+            'token': '123',
+            'user_id': Get.find<GeneralController>().userIdForSendNotification
+          },
+          true,
           getFcmTokenRepo);
       Get.find<GeneralController>().updateFormLoaderController(false);
       Get.snackbar(LanguageConstant.appointmentRejectedSuccessfully.tr, '',
@@ -121,21 +155,28 @@ mentorRejectAppointmentRepo(BuildContext context, bool responseCheck, Map<String
 }
 
 /// Archive Repo
-mentorArchiveAppointmentRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+mentorArchiveAppointmentRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
     if (response['Status'].toString() == 'true') {
       getMethod(
           context,
           getConsultantAllAppointmentsURL,
-          {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')},
+          {
+            'token': '123',
+            'mentor_id': Get.find<GeneralController>().storageBox.read('userID')
+          },
           true,
           getConsultantAllAppointmentsRepo);
       Get.find<GeneralController>().updateFormLoaderController(false);
-      Get.find<ConsultantAppointmentLogic>().updateGetUserAppointmentLoader(true);
-      Get.snackbar('Appointment Archive Successfully', '', colorText: Colors.black, backgroundColor: Colors.white);
+      Get.find<ConsultantAppointmentLogic>()
+          .updateGetUserAppointmentLoader(true);
+      Get.snackbar('Appointment Archive Successfully', '',
+          colorText: Colors.black, backgroundColor: Colors.white);
     } else {
       Get.find<GeneralController>().updateFormLoaderController(false);
-      Get.find<ConsultantAppointmentLogic>().updateGetUserAppointmentLoader(true);
+      Get.find<ConsultantAppointmentLogic>()
+          .updateGetUserAppointmentLoader(true);
     }
   } else if (!responseCheck) {
     Get.find<GeneralController>().updateFormLoaderController(false);
@@ -144,21 +185,28 @@ mentorArchiveAppointmentRepo(BuildContext context, bool responseCheck, Map<Strin
 }
 
 /// Un Archive Repo
-mentorUnArchiveAppointmentRepo(BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+mentorUnArchiveAppointmentRepo(
+    BuildContext context, bool responseCheck, Map<String, dynamic> response) {
   if (responseCheck) {
     if (response['Status'].toString() == 'true') {
       getMethod(
           context,
           getConsultantAllAppointmentsURL,
-          {'token': '123', 'mentor_id': Get.find<GeneralController>().storageBox.read('userID')},
+          {
+            'token': '123',
+            'mentor_id': Get.find<GeneralController>().storageBox.read('userID')
+          },
           true,
           getConsultantAllAppointmentsRepo);
       Get.find<GeneralController>().updateFormLoaderController(false);
-      Get.find<ConsultantAppointmentLogic>().updateGetUserAppointmentLoader(true);
-      Get.snackbar('Appointment Un Archive Successfully', '', colorText: Colors.black, backgroundColor: Colors.white);
+      Get.find<ConsultantAppointmentLogic>()
+          .updateGetUserAppointmentLoader(true);
+      Get.snackbar('Appointment Un Archive Successfully', '',
+          colorText: Colors.black, backgroundColor: Colors.white);
     } else {
       Get.find<GeneralController>().updateFormLoaderController(false);
-      Get.find<ConsultantAppointmentLogic>().updateGetUserAppointmentLoader(true);
+      Get.find<ConsultantAppointmentLogic>()
+          .updateGetUserAppointmentLoader(true);
     }
   } else if (!responseCheck) {
     Get.find<GeneralController>().updateFormLoaderController(false);

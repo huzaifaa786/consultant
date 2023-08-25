@@ -146,6 +146,32 @@ bookAppointmentFileRepo(File file1, BuildContext context) async {
 
 bookAppointmentRepo(
     BuildContext context, bool responseCheck, Map<String, dynamic> response) {
+  ///---make-notification
+  Get.find<GeneralController>().updateNotificationBody(
+      'New Appointment For You', '', null, 'mentee/appointment/log', null);
+
+  ///----send-sms
+  postMethod(
+      context,
+      sendSMSUrl,
+      {
+        'token': '123',
+        'phone': Get.find<SmsLogic>().phoneNumber,
+        'message': Get.find<GeneralController>().notificationTitle,
+      },
+      true,
+      sendSMSRepo);
+
+  ///----fcm-send-start
+  getMethod(
+      context,
+      fcmGetUrl,
+      {
+        'token': '123',
+        'user_id': Get.find<UserHomeLogic>().selectedConsultantID
+      },
+      true,
+      getFcmTokenRepo);
   Get.find<BookAppointmentLogic>().myWidth = 0;
   Get.find<BookAppointmentLogic>().update();
   Get.offAllNamed(PageRoutes.appointmentConfirmation);
