@@ -258,7 +258,8 @@ class _ModalInsideModalState extends State<ModalInsideModal> {
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children: [
                                           ///---Notes
-                                          Expanded(
+                                          SizedBox(
+                                            width: MediaQuery.of(context).size.width * 0.5,
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -275,9 +276,9 @@ class _ModalInsideModalState extends State<ModalInsideModal> {
                                                   _appointmentDetailLogic.selectedAppointmentData.notesConsultant == null
                                                       ? '...'
                                                       : _appointmentDetailLogic.selectedAppointmentData.notesConsultant!,
-                                                  softWrap: true,
-                                                  overflow: TextOverflow.ellipsis,
-                                                  maxLines: 1,
+                                                  // softWrap: true,
+                                                  // overflow: TextOverflow.ellipsis,
+                                                  // maxLines: 1,
                                                   style: state.sectionDataTextStyle,
                                                 ),
                                               ],
