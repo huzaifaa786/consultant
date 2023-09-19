@@ -239,9 +239,9 @@ class _ModalInsideModalState extends State<ModalInsideModal> {
                                         ),
                                         Text(
                                           _appointmentDetailLogic.selectedAppointmentData.questions!,
-                                          softWrap: true,
-                                          overflow: TextOverflow.ellipsis,
-                                          maxLines: 1,
+                                          // softWrap: true,
+                                          // overflow: TextOverflow.ellipsis,
+                                          // maxLines: 1,
                                           style: state.sectionDataTextStyle,
                                         ),
                                       ],
